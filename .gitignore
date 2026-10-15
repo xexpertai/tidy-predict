@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+out/
+.tools/
+models/
+*.egg-info/
+runs/
+demo/build/
+demo/raw/
+demo/raw-report/

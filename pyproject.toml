@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tidy-predict"
+version = "0.1.0"
+description = "A local weekly restock note for a small shop: clean a messy order export, forecast next week's units per product with TabPFN, and have a local Gemma model write the note."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "Harsha Shinde" }]
+dependencies = [
+    "tabpfn==9.2.0",          # code: Apache-2.0; we only ever load the TabPFN-2 weights (Prior Labs License)
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "scikit-learn>=1.3",
+    "python-calamine>=0.2",   # fast .xlsx reader
+    "pyarrow>=14",            # compact strings for big exports
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+demo = ["playwright==1.63.0"]   # only for recording the demo video
+
+[project.scripts]
+tidy-predict = "tidy_predict.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tidy_predict*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,137 @@
+{
+  "data": "UCI Online Retail II (CC BY 4.0), cleaned by tidy-predict",
+  "weeks": [
+    "2011-09-12",
+    "2011-09-19",
+    "2011-09-26",
+    "2011-10-03",
+    "2011-10-10",
+    "2011-10-17",
+    "2011-10-24",
+    "2011-10-31",
+    "2011-11-07",
+    "2011-11-14",
+    "2011-11-21",
+    "2011-11-28"
+  ],
+  "products_per_week": 20,
+  "predictions": 240,
+  "metric_note": "WAPE = sum|actual - forecast| / sum(actual), pooled over all product-weeks; lower is better.",
+  "summary": {
+    "TabPFN-2 median": {
+      "wape": 0.5023,
+      "mae_units": 355.3,
+      "weeks_best_or_tied": 4,
+      "median_weekly_wape": 0.4836,
+      "n": 240
+    },
+    "TabPFN-2 mean": {
+      "wape": 0.5057,
+      "mae_units": 357.8,
+      "weeks_best_or_tied": 0,
+      "median_weekly_wape": 0.4835,
+      "n": 240
+    },
+    "Gradient boosting (same features)": {
+      "wape": 0.5268,
+      "mae_units": 372.7,
+      "weeks_best_or_tied": 3,
+      "median_weekly_wape": 0.5213,
+      "n": 240
+    },
+    "Last week": {
+      "wape": 0.6307,
+      "mae_units": 446.2,
+      "weeks_best_or_tied": 0,
+      "median_weekly_wape": 0.5678,
+      "n": 240
+    },
+    "Mean of last 4 weeks": {
+      "wape": 0.4913,
+      "mae_units": 347.6,
+      "weeks_best_or_tied": 5,
+      "median_weekly_wape": 0.4847,
+      "n": 240
+    },
+    "Same week last year": {
+      "wape": 0.8844,
+      "mae_units": 625.7,
+      "weeks_best_or_tied": 0,
+      "median_weekly_wape": 0.8314,
+      "n": 240
+    }
+  },
+  "tabpfn_interval": {
+    "p10_p90_coverage": 0.8,
+    "actual_above_p90_share": 0.1083,
+    "actual_below_p10_share": 0.0917
+  },
+  "timing": [
+    {
+      "week": "2011-09-12",
+      "tabpfn_seconds": 22.0,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-09-19",
+      "tabpfn_seconds": 20.8,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-09-26",
+      "tabpfn_seconds": 20.6,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-10-03",
+      "tabpfn_seconds": 22.0,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-10-10",
+      "tabpfn_seconds": 20.6,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-10-17",
+      "tabpfn_seconds": 20.6,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-10-24",
+      "tabpfn_seconds": 20.3,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-10-31",
+      "tabpfn_seconds": 20.8,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-11-07",
+      "tabpfn_seconds": 22.2,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-11-14",
+      "tabpfn_seconds": 25.2,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-11-21",
+      "tabpfn_seconds": 24.2,
+      "n_train": 1000
+    },
+    {
+      "week": "2011-11-28",
+      "tabpfn_seconds": 25.0,
+      "n_train": 1000
+    }
+  ],
+  "tabpfn_seconds_median": 21.4,
+  "machine": {
+    "cpu": "x86_64",
+    "python": "3.12.15"
+  },
+  "generated": "2026-10-13 03:33:55 IST"
+}

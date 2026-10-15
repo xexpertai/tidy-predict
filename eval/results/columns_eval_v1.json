@@ -1,0 +1,374 @@
+{
+  "model": "gemma-4-E2B-it-Q4_0",
+  "cases": 12,
+  "works": {
+    "rules": 3,
+    "rules_plus_model": 8,
+    "model_alone": 8
+  },
+  "wrong_mappings": {
+    "rules": 1,
+    "rules_plus_model": 4,
+    "model_alone": 5
+  },
+  "median_model_seconds": 12.0,
+  "per_case": [
+    {
+      "headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 8,
+        "truth_fields": 8
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 8,
+        "truth_fields": 8
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 8,
+        "truth_fields": 8
+      },
+      "model_seconds": 14.6
+    },
+    {
+      "headers": [
+        "Order No",
+        "SKU",
+        "Item name",
+        "Qty",
+        "Order date",
+        "Unit price"
+      ],
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 6,
+        "truth_fields": 6
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 6,
+        "truth_fields": 6
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 6,
+        "truth_fields": 6
+      },
+      "model_seconds": 12.6
+    },
+    {
+      "headers": [
+        "Bill",
+        "Thing",
+        "How many",
+        "When"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_seconds": 10.9
+    },
+    {
+      "headers": [
+        "Bill No",
+        "Maal",
+        "Kitne",
+        "Tarikh",
+        "Rate"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 2,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "model_seconds": 12.0
+    },
+    {
+      "headers": [
+        "Ticket",
+        "Product",
+        "Sold",
+        "Day",
+        "Each"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 1,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_seconds": 11.3
+    },
+    {
+      "headers": [
+        "Created at",
+        "Line item",
+        "Line qty",
+        "Line price",
+        "Order name",
+        "Email"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 6
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 6
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 6
+      },
+      "model_seconds": 12.3
+    },
+    {
+      "headers": [
+        "voucher",
+        "article no",
+        "article",
+        "pieces",
+        "posting date"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 1,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_seconds": 11.5
+    },
+    {
+      "headers": [
+        "Date of sale",
+        "Code",
+        "Units",
+        "Buyer"
+      ],
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": false,
+        "wrong": [
+          "invoice"
+        ],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_seconds": 11.1
+    },
+    {
+      "headers": [
+        "Receipt #",
+        "Menu item",
+        "Count",
+        "Time",
+        "Price ($)"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_seconds": 12.2
+    },
+    {
+      "headers": [
+        "Dispatch date",
+        "Batch",
+        "Variety",
+        "Trays"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 1,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": false,
+        "wrong": [
+          "invoice",
+          "stock_code"
+        ],
+        "correct_fields": 2,
+        "truth_fields": 4
+      },
+      "model_seconds": 11.7
+    },
+    {
+      "headers": [
+        "Fecha",
+        "Producto",
+        "Cantidad",
+        "Precio"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_seconds": 11.2
+    },
+    {
+      "headers": [
+        "Txn",
+        "Listing",
+        "Copies",
+        "Paid on",
+        "Shopper"
+      ],
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": false,
+        "wrong": [
+          "stock_code"
+        ],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "model_seconds": 12.0
+    }
+  ],
+  "data_note": "synthetic header sets, see eval/header_variants.json"
+}

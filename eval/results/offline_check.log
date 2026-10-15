@@ -1,0 +1,17 @@
+date: 2026-10-13T07:59:13+05:30
+command: unshare -rn .venv/bin/tidy-predict data/raw/online_retail_II.csv --as-of 2011-11-27 --no-llm --out out/offline
+network interfaces inside the namespace:
+lo               DOWN           00:00:00:00:00:00 <LOOPBACK> 
+internet reachable? 000no
+Read 1,067,371 rows from online_retail_II.csv
+Columns found (header rules)
+Cleaned: 1,067,371 rows in, 997,117 counted as sales (34,335 duplicates, 21,302 returns, 5,869 postage/fee lines set aside)
+Forecasting the week of 28 Nov 2011 for 20 regular products with TabPFN-2 on this CPU...
+Forecast done in 14 s (1000 training rows)
+Writing the note (template)...
+Note written by template
+Done in 35 s
+Wrote out/offline/report.html, forecast.csv, clean_sales.csv, issues.csv, run.json
+For the week starting 28 Nov 2011, keep the most stock of Red harmonica in box (2993), Small popcorn holder (2596), Rabbit night light (2592): these are the units that would cover a busy week. The biggest expected rise is Set of 60 pantry design cake cases, up 79% on its 4-week average. The biggest expected drop is Rabbit night light, down 58% on its 4-week average. 70254 of 1067371 rows in the file were set aside while cleaning (duplicates, returns, postage and similar); see the issues list.
+exit: 0
+target week 2011-11-28 | forecast seconds 13.6 | products 20 | first item {'product': 'Red harmonica in box', 'expected_units': 512, 'low_units': 44, 'stock_for_busy_week': 2993, 'last_week_units': 22, 'avg_last_4_weeks': 918, 'change_vs_4wk_avg_pct': -44}

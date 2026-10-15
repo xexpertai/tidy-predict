@@ -1,0 +1,179 @@
+{
+  "note": "All on the 12 test weeks x 20 products (240 product-weeks) unless stated. Lower is better for WAPE, pinball and Winkler. k for '4-week mean x k' was tuned on the 7 validation weeks only.",
+  "1_week_by_week": {
+    "per_week": [
+      {
+        "week": "2011-09-12",
+        "tabpfn_p50": 0.3788,
+        "mean_4w": 0.3568
+      },
+      {
+        "week": "2011-09-19",
+        "tabpfn_p50": 0.3617,
+        "mean_4w": 0.3821
+      },
+      {
+        "week": "2011-09-26",
+        "tabpfn_p50": 0.482,
+        "mean_4w": 0.4857
+      },
+      {
+        "week": "2011-10-03",
+        "tabpfn_p50": 0.4853,
+        "mean_4w": 0.4797
+      },
+      {
+        "week": "2011-10-10",
+        "tabpfn_p50": 0.6876,
+        "mean_4w": 0.7941
+      },
+      {
+        "week": "2011-10-17",
+        "tabpfn_p50": 0.4211,
+        "mean_4w": 0.4836
+      },
+      {
+        "week": "2011-10-24",
+        "tabpfn_p50": 0.6367,
+        "mean_4w": 0.631
+      },
+      {
+        "week": "2011-10-31",
+        "tabpfn_p50": 0.6145,
+        "mean_4w": 0.6259
+      },
+      {
+        "week": "2011-11-07",
+        "tabpfn_p50": 0.544,
+        "mean_4w": 0.5586
+      },
+      {
+        "week": "2011-11-14",
+        "tabpfn_p50": 0.4521,
+        "mean_4w": 0.3896
+      },
+      {
+        "week": "2011-11-21",
+        "tabpfn_p50": 0.4314,
+        "mean_4w": 0.528
+      },
+      {
+        "week": "2011-11-28",
+        "tabpfn_p50": 0.505,
+        "mean_4w": 0.3121
+      }
+    ],
+    "tabpfn_wins": 7,
+    "mean_4w_wins": 5,
+    "pooled_wape_first_11_weeks": {
+      "tabpfn_p50": 0.5019,
+      "mean_4w": 0.514
+    },
+    "last_week": {
+      "week": "2011-11-28",
+      "tabpfn_p50": 0.505,
+      "mean_4w": 0.3121
+    },
+    "validation_mean_weekly_wape": {
+      "tabpfn_level (chosen)": 0.5646,
+      "mean_4w": 0.6265
+    }
+  },
+  "2_3_ranges_and_stocking": {
+    "tabpfn_2": {
+      "coverage_p10_p90": 0.8,
+      "relative_width": 1.4976,
+      "pinball_p10": 52.3,
+      "pinball_p90": 139.9,
+      "winkler_80": 1922.6,
+      "stock_to_top": {
+        "in_stock_share": 0.8917,
+        "leftover_units": 160401,
+        "short_units": 19493
+      }
+    },
+    "mean_4w_x_k_tuned_on_validation": {
+      "k": {
+        "p10": 0.2,
+        "p50": 0.78,
+        "p90": 2.09
+      },
+      "coverage_p10_p90": 0.8542,
+      "relative_width": 1.7816,
+      "pinball_p10": 58.8,
+      "pinball_p90": 122.8,
+      "winkler_80": 1816.0,
+      "stock_to_top": {
+        "in_stock_share": 0.8833,
+        "leftover_units": 177713,
+        "short_units": 12991
+      }
+    },
+    "naive_per_product_ratio_band": {
+      "coverage_p10_p90": 0.8458,
+      "relative_width": 2.6022,
+      "pinball_p10": 56.7,
+      "pinball_p90": 171.6,
+      "winkler_80": 2282.7,
+      "stock_to_top": {
+        "in_stock_share": 0.9167,
+        "leftover_units": 326237,
+        "short_units": 9504
+      }
+    },
+    "ORACLE_mean_4w_x_k_tuned_on_test": {
+      "k": {
+        "p10": 0.39,
+        "p50": 0.88,
+        "p90": 1.94
+      },
+      "coverage_p10_p90": 0.7583,
+      "relative_width": 1.4611,
+      "pinball_p10": 53.0,
+      "pinball_p90": 122.3,
+      "winkler_80": 1752.8,
+      "stock_to_top": {
+        "in_stock_share": 0.875,
+        "leftover_units": 155995,
+        "short_units": 15281
+      },
+      "warning": "k chosen on the test weeks themselves; not achievable in practice"
+    }
+  },
+  "4_point_forecast": {
+    "tabpfn_p50_wape": 0.5023,
+    "mean_4w_wape": 0.4913,
+    "mean_4w_x_k_val_wape": 0.4862
+  },
+  "validation_rows": 140,
+  "demo_week": {
+    "week": "2011-11-28",
+    "inside_p10_p90": 17,
+    "above_p90": [
+      "Small popcorn holder",
+      "Rabbit night light"
+    ],
+    "below_p10": [
+      "Brocade ring purse"
+    ],
+    "sum_actual": 19101,
+    "sum_expected": 13386,
+    "rabbit_night_light": {
+      "expected": {
+        "product": "Rabbit night light",
+        "expected_units": 1249,
+        "low_units": 633,
+        "stock_for_busy_week": 2592,
+        "last_week_units": 2340,
+        "avg_last_4_weeks": 2971,
+        "change_vs_4wk_avg_pct": -58
+      },
+      "actual": 4452.0,
+      "rank_of_that_week_in_its_history": 2,
+      "best_week": [
+        "2011-10-24",
+        5593.0
+      ]
+    }
+  }
+}

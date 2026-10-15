@@ -1,0 +1,18 @@
+   0.15s home
+   2.71s file chosen
+   3.96s form filled
+  10.51s submitted
+  15.94s log: Read 1,067,371 rows from online_retail_II.csv
+  15.94s log: Columns found (header rules)
+  35.94s log: Cleaned: 1,067,371 rows in, 997,117 counted as sales (34,335 duplicates, 21,302 returns, 5,869 postage/fee lines set aside)
+  39.83s log: Forecasting the week of 28 Nov 2011 for 20 regular products with TabPFN-2 on this CPU...
+  74.33s log: Forecast done in 24 s (1000 training rows)
+  79.69s log: Writing the note with the local model...
+ 112.32s log: Note written by gemma-4-E2B-it-Q4_0 (local, llama.cpp)
+ 124.29s log: Done in 113 s
+ 124.29s state: done
+ 127.72s report
+ 143.59s report scrolled
+ 149.60s footer
+ 155.61s end
+video: ./demo/raw/page@07ce3c068a8d5aabf3dba31496062140.webm

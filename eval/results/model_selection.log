@@ -1,0 +1,50 @@
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-07-04', 'tabpfn_level': 0.5037299005733576, 'seconds_level': 66.2, 'tabpfn_relative': 0.5204108652346501, 'seconds_relative': 56.0, 'last_week': 0.5926395939086294, 'mean_4w': 0.49012267343485616}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-07-11', 'tabpfn_level': 0.6857245379505625, 'seconds_level': 60.6, 'tabpfn_relative': 0.7084558125056845, 'seconds_relative': 54.1, 'last_week': 1.0966924344189584, 'mean_4w': 0.7976492206310987}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-07-18', 'tabpfn_level': 0.4777163997743811, 'seconds_level': 342.3, 'tabpfn_relative': 0.48126068990821863, 'seconds_relative': 102.0, 'last_week': 0.7082362082362083, 'mean_4w': 0.4896318958818959}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-07-25', 'tabpfn_level': 0.4265688113786068, 'seconds_level': 55.8, 'tabpfn_relative': 0.40488837429226865, 'seconds_relative': 51.0, 'last_week': 0.5988331153807464, 'mean_4w': 0.4135147369479932}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-08-01', 'tabpfn_level': 0.6865054887164204, 'seconds_level': 231.6, 'tabpfn_relative': 0.6689705365792126, 'seconds_relative': 59.0, 'last_week': 0.9244597313258486, 'mean_4w': 0.7468849373742618}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-08-08', 'tabpfn_level': 0.6551476751194747, 'seconds_level': 64.8, 'tabpfn_relative': 0.6381308910564517, 'seconds_relative': 57.6, 'last_week': 0.9219319562575942, 'mean_4w': 0.6976002430133658}
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+{'week': '2011-08-15', 'tabpfn_level': 0.5168142102824569, 'seconds_level': 54.7, 'tabpfn_relative': 0.5171941933972233, 'seconds_relative': 43.8, 'last_week': 0.6660820422878301, 'mean_4w': 0.7499025626035273}
+{'tabpfn_level': 0.5646, 'seconds_level': 125.1429, 'tabpfn_relative': 0.5628, 'seconds_relative': 60.5, 'last_week': 0.787, 'mean_4w': 0.6265}

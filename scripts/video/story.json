@@ -1,0 +1,60 @@
+{
+  "_note": "Narration for demo/tidy-predict-demo.mp4. 'text' is what is said (for review); 'say' is the spelling given to the voice model. Numbers: out of runs/<id>/out/run.json (17 of 20 in range, 2 above P90, 113 s run) and eval/results (backtest_summary.json, interval_baseline.json).",
+  "scenes": [
+    {
+      "id": "title",
+      "src": "card:title",
+      "text": "tidy-predict: a weekly restock note you can sell to small online shops, made on one laptop.",
+      "say": "tidy-predict: a weekly restock note you can sell to small online shops, made on one laptop."
+    },
+    {
+      "id": "upload",
+      "src": "app:home..submitted+1.5",
+      "text": "The shop sends its order export. Here it's public data: real, anonymised orders from a UK gift shop, replayed as of late November 2011.",
+      "say": "The shop sends its order export. Here it's public data: real, anonymised orders from a U.K. gift shop, replayed as of late November, twenty eleven."
+    },
+    {
+      "id": "log",
+      "src": "app:submitted+1.5..state: done+0.5",
+      "label": "Sped up {speed}x. The whole run took 113 s on a laptop CPU.",
+      "text": "tidy-predict reads a million rows and sets aside duplicates, returns and postage, with a reason for each. Then TabPFN-2 forecasts next week on the CPU, and Gemma, running locally, writes the note.",
+      "say": "tidy-predict reads a million rows, and sets aside duplicates, returns and postage, with a reason for each. Then Tab P F N two forecasts next week on the C P U, and Gemma, running locally, writes the note.",
+      "hold_end": 2.0
+    },
+    {
+      "id": "note",
+      "src": "still:rep-top",
+      "text": "The note says what to have ready for a busy week. Every number in it is checked against the table, so Gemma can't invent one."
+    },
+    {
+      "id": "table",
+      "src": "still:rep-table",
+      "text": "Each product gets an expected number and a likely range. It's a replay, so we can check: seventeen of twenty landed in the range. Rabbit night lights did not: the model expected a drop, and the shop sold 4,452.",
+      "say": "Each product gets an expected number and a likely range. It's a replay, so we can check: seventeen of twenty landed in the range. Rabbit night lights did not: the model expected a drop, and the shop sold four thousand, four hundred and fifty two.",
+      "box": [
+        352,
+        256,
+        1216,
+        56
+      ],
+      "box_from": 7.5
+    },
+    {
+      "id": "cleaned",
+      "src": "still:rep-bottom",
+      "text": "Every set-aside row is listed with its reason, and the models are credited."
+    },
+    {
+      "id": "numbers",
+      "src": "card:numbers",
+      "text": "Tested on twelve weeks, run once. With no per-shop factors fitted, TabPFN's ranges came out calibrated: eighty percent inside, and narrower, with fewer units left over, but more units short. On the middle number it's an honest tie with a four-week average whose factors were fitted on earlier months.",
+      "say": "Tested on twelve weeks, run once. With no per-shop factors fitted, Tab P F N's ranges came out calibrated: eighty percent inside, and narrower, with fewer units left over, but more units short. On the middle number it's an honest tie with a four-week average whose factors were fitted on earlier months."
+    },
+    {
+      "id": "end",
+      "src": "card:end",
+      "text": "Both models are open and local, and TabPFN-2's licence allows paid use. Built with PriorLabs-TabPFN.",
+      "say": "Both models are open and local, and Tab P F N two's licence allows paid use. Built with Prior Labs Tab P F N."
+    }
+  ]
+}

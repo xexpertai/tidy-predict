@@ -1,0 +1,15 @@
+{
+  "tabpfn_p10_p90": {
+    "coverage": 0.8,
+    "above_top_share": 0.1083,
+    "relative_width": 1.4976,
+    "n": 240
+  },
+  "naive_ratio_p10_p90": {
+    "coverage": 0.8458,
+    "above_top_share": 0.0833,
+    "relative_width": 2.6022,
+    "n": 240
+  },
+  "note": "relative_width = sum(top - bottom) / sum(actual); target coverage is 0.80"
+}

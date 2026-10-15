@@ -1,0 +1,12 @@
+{
+  "video": "demo/tidy-predict-demo.mp4",
+  "duration_s": 82.5,
+  "resolution": "1920,1080",
+  "lufs": -14.64,
+  "true_peak_dbtp": -1.38,
+  "silences_over_0_6s": [],
+  "frames_every_2s": 41,
+  "frame_width_px": 1920,
+  "issues": [],
+  "pass": true
+}

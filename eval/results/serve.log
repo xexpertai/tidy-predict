@@ -1,0 +1,4 @@
+tidy-predict on http://127.0.0.1:8765  (Ctrl-C to stop)
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(

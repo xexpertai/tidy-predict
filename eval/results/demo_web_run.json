@@ -1,0 +1,272 @@
+{
+  "file": "online_retail_II.csv",
+  "as_of": "2011-11-27",
+  "target_week": "2011-11-28",
+  "mapping": {
+    "invoice": "Invoice",
+    "stock_code": "StockCode",
+    "description": "Description",
+    "quantity": "Quantity",
+    "invoice_date": "InvoiceDate",
+    "price": "Price",
+    "customer_id": "Customer ID",
+    "country": "Country"
+  },
+  "clean_stats": {
+    "rows_in": 1067371,
+    "duplicate": 34335,
+    "bad_date": 0,
+    "bad_quantity": 0,
+    "no_product": 0,
+    "service_line": 5869,
+    "cancellation": 21302,
+    "cancelled_sale": 6180,
+    "zero_price": 2568,
+    "zero_quantity": 0,
+    "rows_out": 997117,
+    "products": 4714
+  },
+  "facts": {
+    "week_starting": "28 Nov 2011",
+    "products_forecast": 20,
+    "average_window_weeks": 4,
+    "rows_in_file": 1067371,
+    "rows_used_as_sales": 997117,
+    "rows_set_aside": 70254,
+    "biggest_rise": {
+      "product": "Set of 60 pantry design cake cases",
+      "up_pct": 79
+    },
+    "biggest_drop": {
+      "product": "Rabbit night light",
+      "down_pct": 58
+    },
+    "items": [
+      {
+        "product": "Red harmonica in box",
+        "expected_units": 512,
+        "low_units": 44,
+        "stock_for_busy_week": 2993,
+        "last_week_units": 22,
+        "avg_last_4_weeks": 918,
+        "change_vs_4wk_avg_pct": -44
+      },
+      {
+        "product": "Small popcorn holder",
+        "expected_units": 1276,
+        "low_units": 654,
+        "stock_for_busy_week": 2596,
+        "last_week_units": 2755,
+        "avg_last_4_weeks": 2738,
+        "change_vs_4wk_avg_pct": -53
+      },
+      {
+        "product": "Rabbit night light",
+        "expected_units": 1249,
+        "low_units": 633,
+        "stock_for_busy_week": 2592,
+        "last_week_units": 2340,
+        "avg_last_4_weeks": 2971,
+        "change_vs_4wk_avg_pct": -58
+      },
+      {
+        "product": "Assorted colour bird ornament",
+        "expected_units": 1109,
+        "low_units": 582,
+        "stock_for_busy_week": 2246,
+        "last_week_units": 1026,
+        "avg_last_4_weeks": 1261,
+        "change_vs_4wk_avg_pct": -12
+      },
+      {
+        "product": "World war 2 gliders asstd designs",
+        "expected_units": 1125,
+        "low_units": 593,
+        "stock_for_busy_week": 2220,
+        "last_week_units": 915,
+        "avg_last_4_weeks": 1056,
+        "change_vs_4wk_avg_pct": 6
+      },
+      {
+        "product": "Jumbo bag red retrospot",
+        "expected_units": 1120,
+        "low_units": 590,
+        "stock_for_busy_week": 2217,
+        "last_week_units": 753,
+        "avg_last_4_weeks": 1379,
+        "change_vs_4wk_avg_pct": -19
+      },
+      {
+        "product": "Paper chain kit 50's christmas",
+        "expected_units": 1042,
+        "low_units": 468,
+        "stock_for_busy_week": 2181,
+        "last_week_units": 1691,
+        "avg_last_4_weeks": 1756,
+        "change_vs_4wk_avg_pct": -41
+      },
+      {
+        "product": "Mini paint set vintage",
+        "expected_units": 535,
+        "low_units": 152,
+        "stock_for_busy_week": 1471,
+        "last_week_units": 402,
+        "avg_last_4_weeks": 758,
+        "change_vs_4wk_avg_pct": -29
+      },
+      {
+        "product": "White hanging heart t-light holder",
+        "expected_units": 650,
+        "low_units": 291,
+        "stock_for_busy_week": 1463,
+        "last_week_units": 903,
+        "avg_last_4_weeks": 1132,
+        "change_vs_4wk_avg_pct": -43
+      },
+      {
+        "product": "60 cake cases vintage christmas",
+        "expected_units": 562,
+        "low_units": 221,
+        "stock_for_busy_week": 1461,
+        "last_week_units": 612,
+        "avg_last_4_weeks": 891,
+        "change_vs_4wk_avg_pct": -37
+      },
+      {
+        "product": "Jumbo bag vintage doily",
+        "expected_units": 619,
+        "low_units": 256,
+        "stock_for_busy_week": 1364,
+        "last_week_units": 520,
+        "avg_last_4_weeks": 936,
+        "change_vs_4wk_avg_pct": -34
+      },
+      {
+        "product": "Pack of 72 retrospot cake cases",
+        "expected_units": 524,
+        "low_units": 227,
+        "stock_for_busy_week": 1145,
+        "last_week_units": 341,
+        "avg_last_4_weeks": 583,
+        "change_vs_4wk_avg_pct": -10
+      },
+      {
+        "product": "Pack of 12 london tissues",
+        "expected_units": 371,
+        "low_units": 126,
+        "stock_for_busy_week": 1010,
+        "last_week_units": 100,
+        "avg_last_4_weeks": 598,
+        "change_vs_4wk_avg_pct": -38
+      },
+      {
+        "product": "Jumbo bag pink polkadot",
+        "expected_units": 395,
+        "low_units": 149,
+        "stock_for_busy_week": 987,
+        "last_week_units": 253,
+        "avg_last_4_weeks": 376,
+        "change_vs_4wk_avg_pct": 5
+      },
+      {
+        "product": "Bubblegum ring assorted",
+        "expected_units": 396,
+        "low_units": 155,
+        "stock_for_busy_week": 981,
+        "last_week_units": 697,
+        "avg_last_4_weeks": 466,
+        "change_vs_4wk_avg_pct": -15
+      },
+      {
+        "product": "Victorian glass hanging t-light",
+        "expected_units": 387,
+        "low_units": 149,
+        "stock_for_busy_week": 959,
+        "last_week_units": 372,
+        "avg_last_4_weeks": 367,
+        "change_vs_4wk_avg_pct": 5
+      },
+      {
+        "product": "Set of 60 pantry design cake cases",
+        "expected_units": 375,
+        "low_units": 135,
+        "stock_for_busy_week": 941,
+        "last_week_units": 241,
+        "avg_last_4_weeks": 210,
+        "change_vs_4wk_avg_pct": 79
+      },
+      {
+        "product": "Jumbo bag apples",
+        "expected_units": 373,
+        "low_units": 131,
+        "stock_for_busy_week": 939,
+        "last_week_units": 275,
+        "avg_last_4_weeks": 338,
+        "change_vs_4wk_avg_pct": 11
+      },
+      {
+        "product": "Brocade ring purse",
+        "expected_units": 380,
+        "low_units": 141,
+        "stock_for_busy_week": 935,
+        "last_week_units": 474,
+        "avg_last_4_weeks": 250,
+        "change_vs_4wk_avg_pct": 52
+      },
+      {
+        "product": "Pack of 60 pink paisley cake cases",
+        "expected_units": 386,
+        "low_units": 147,
+        "stock_for_busy_week": 932,
+        "last_week_units": 392,
+        "avg_last_4_weeks": 316,
+        "change_vs_4wk_avg_pct": 22
+      }
+    ]
+  },
+  "note": {
+    "text": "For this week, you should have 2993 units of Red harmonica in box, 2596 units of Small popcorn holder, and 2592 units of Rabbit night light ready. The biggest expected rise is 79% for the Set of 60 pantry design cake cases, and the biggest expected drop is 58% for the Rabbit night light. During cleaning, 70254 rows of the file were set aside.",
+    "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+    "attempts": [
+      {
+        "text": "For this week, you should have 2993 units of Red harmonica in box, 2596 units of Small popcorn holder, and 2592 units of Rabbit night light ready. The biggest expected rise is 79% for the Set of 60 pantry design cake cases, and the biggest expected drop is 58% for the Rabbit night light. During cleaning, 70254 rows of the file were set aside.",
+        "ok": true,
+        "unknown_numbers": [],
+        "seconds": 32.4,
+        "usage": {
+          "completion_tokens": 98,
+          "prompt_tokens": 1056,
+          "total_tokens": 1154,
+          "prompt_tokens_details": {
+            "cached_tokens": 1055
+          }
+        },
+        "tokens_per_s": 3.137930010444454
+      }
+    ]
+  },
+  "forecast_seconds": 23.6,
+  "total_seconds": 113.4,
+  "actuals": {
+    "Small popcorn holder": 3271.0,
+    "Jumbo bag red retrospot": 1040.0,
+    "World war 2 gliders asstd designs": 689.0,
+    "Rabbit night light": 4452.0,
+    "Assorted colour bird ornament": 953.0,
+    "Jumbo bag vintage doily": 336.0,
+    "Pack of 72 retrospot cake cases": 546.0,
+    "White hanging heart t-light holder": 730.0,
+    "Mini paint set vintage": 301.0,
+    "Red harmonica in box": 1120.0,
+    "Paper chain kit 50's christmas": 1562.0,
+    "Jumbo bag pink polkadot": 436.0,
+    "60 cake cases vintage christmas": 1031.0,
+    "Brocade ring purse": 130.0,
+    "Pack of 12 london tissues": 636.0,
+    "Victorian glass hanging t-light": 749.0,
+    "Set of 60 pantry design cake cases": 148.0,
+    "Bubblegum ring assorted": 511.0,
+    "Pack of 60 pink paisley cake cases": 239.0,
+    "Jumbo bag apples": 221.0
+  }
+}

@@ -1,0 +1,35 @@
+Read 1,067,371 rows from online_retail_II.csv
+Columns found (header rules)
+Cleaned: 1,067,371 rows in, 997,117 counted as sales (34,335 duplicates, 21,302 returns, 5,869 postage/fee lines set aside)
+Forecasting the week of 28 Nov 2011 for 20 regular products with TabPFN-2 on this CPU...
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+Forecast done in 15 s (1000 training rows)
+Writing the note (template)...
+Note written by template
+Done in 39 s
+Wrote out/demo-template/report.html, forecast.csv, clean_sales.csv, issues.csv, run.json
+	Command being timed: ".venv/bin/tidy-predict data/raw/online_retail_II.csv --as-of 2011-11-27 --no-llm --out out/demo-template --label Demo data: UCI Online Retail II (real, anonymised orders of a UK online gift shop, CC BY 4.0), replayed as of 27 Nov 2011"
+	User time (seconds): 77.85
+	System time (seconds): 9.69
+	Percent of CPU this job got: 216%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:40.39
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1372948
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 81
+	Minor (reclaiming a frame) page faults: 2643311
+	Voluntary context switches: 230
+	Involuntary context switches: 1009
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

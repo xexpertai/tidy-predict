@@ -1,0 +1,17 @@
+{
+  "sheet_1": "Year 2009-2010",
+  "sheet_1_rows": 525461,
+  "sheet_1_dates": [
+    "2009-12-01 07:45:00",
+    "2010-12-09 20:01:00"
+  ],
+  "sheet_2": "Year 2010-2011",
+  "sheet_2_rows": 541910,
+  "sheet_2_dates": [
+    "2010-12-01 08:26:00",
+    "2011-12-09 12:50:00"
+  ],
+  "sheet_2_rows_inside_sheet_1_dates": 22523,
+  "of_which_exact_copies_of_a_sheet_1_row": 22523,
+  "total_duplicates_removed_by_cleaning": 34335
+}

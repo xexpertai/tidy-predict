@@ -1,0 +1,116 @@
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-09-12  tabpfn  22.0s  wape p50 0.379  last_week 0.428  gbm 0.470
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-09-19  tabpfn  20.8s  wape p50 0.362  last_week 0.506  gbm 0.478
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-09-26  tabpfn  20.6s  wape p50 0.482  last_week 0.544  gbm 0.517
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-10-03  tabpfn  22.0s  wape p50 0.485  last_week 0.601  gbm 0.553
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-10-10  tabpfn  20.6s  wape p50 0.688  last_week 1.376  gbm 0.695
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-10-17  tabpfn  20.6s  wape p50 0.421  last_week 0.546  gbm 0.361
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-10-24  tabpfn  20.3s  wape p50 0.637  last_week 0.705  gbm 0.727
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-10-31  tabpfn  20.8s  wape p50 0.614  last_week 1.162  gbm 0.669
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-11-07  tabpfn  22.2s  wape p50 0.544  last_week 0.660  gbm 0.525
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-11-14  tabpfn  25.2s  wape p50 0.452  last_week 0.421  gbm 0.415
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-11-21  tabpfn  24.2s  wape p50 0.431  last_week 0.590  gbm 0.391
+./.venv/lib/python3.12/site-packages/tabpfn/validation.py:234: UserWarning: Running on CPU with more than 200 samples may be slow.
+Consider using a GPU or the tabpfn-client API: https://github.com/PriorLabs/tabpfn-client
+  _validate_num_samples_for_cpu(
+2011-11-28  tabpfn  25.0s  wape p50 0.505  last_week 0.390  gbm 0.531
+{
+ "TabPFN-2 median": {
+  "wape": 0.5023,
+  "mae_units": 355.3,
+  "weeks_best_or_tied": 4,
+  "median_weekly_wape": 0.4836,
+  "n": 240
+ },
+ "TabPFN-2 mean": {
+  "wape": 0.5057,
+  "mae_units": 357.8,
+  "weeks_best_or_tied": 0,
+  "median_weekly_wape": 0.4835,
+  "n": 240
+ },
+ "Gradient boosting (same features)": {
+  "wape": 0.5268,
+  "mae_units": 372.7,
+  "weeks_best_or_tied": 3,
+  "median_weekly_wape": 0.5213,
+  "n": 240
+ },
+ "Last week": {
+  "wape": 0.6307,
+  "mae_units": 446.2,
+  "weeks_best_or_tied": 0,
+  "median_weekly_wape": 0.5678,
+  "n": 240
+ },
+ "Mean of last 4 weeks": {
+  "wape": 0.4913,
+  "mae_units": 347.6,
+  "weeks_best_or_tied": 5,
+  "median_weekly_wape": 0.4847,
+  "n": 240
+ },
+ "Same week last year": {
+  "wape": 0.8844,
+  "mae_units": 625.7,
+  "weeks_best_or_tied": 0,
+  "median_weekly_wape": 0.8314,
+  "n": 240
+ }
+}
+{"p10_p90_coverage": 0.8, "actual_above_p90_share": 0.1083, "actual_below_p10_share": 0.0917}
+	Command being timed: ".venv/bin/python eval/backtest.py eval/results 12"
+	User time (seconds): 931.13
+	System time (seconds): 134.32
+	Percent of CPU this job got: 342%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:10.96
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 770260
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 388
+	Minor (reclaiming a frame) page faults: 27537807
+	Voluntary context switches: 7372
+	Involuntary context switches: 41240
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

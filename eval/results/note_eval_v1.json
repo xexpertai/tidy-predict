@@ -1,0 +1,288 @@
+{
+  "model": "gemma-4-E2B-it-Q4_0",
+  "notes": 12,
+  "outcomes": {
+    "passed first time": 12
+  },
+  "drafts": 12,
+  "drafts_rejected": 0,
+  "median_seconds_per_draft": 34.4,
+  "per_week": [
+    {
+      "week": "2011-09-12",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of World war 2 gliders asstd designs with 1472 units, Jumbo bag red retrospot with 1461 units, and Small popcorn holder with 1376 units. The biggest expected drop compared with the 4-week average is for Jumbo bag red retrospot with a change of -29. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of World war 2 gliders asstd designs with 1472 units, Jumbo bag red retrospot with 1461 units, and Small popcorn holder with 1376 units. The biggest expected drop compared with the 4-week average is for Jumbo bag red retrospot with a change of -29. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 33.5,
+          "usage": {
+            "completion_tokens": 100,
+            "prompt_tokens": 964,
+            "total_tokens": 1064,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.980720841640501
+        }
+      ]
+    },
+    {
+      "week": "2011-09-19",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the World war 2 gliders asstd designs with 1781 units, Jumbo bag red retrospot with 1631 units, and Small popcorn holder with 1465 units. The biggest expected drop compared to the 4-week average is for the Pack of 60 pink paisley cake cases with a change of -14. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the World war 2 gliders asstd designs with 1781 units, Jumbo bag red retrospot with 1631 units, and Small popcorn holder with 1465 units. The biggest expected drop compared to the 4-week average is for the Pack of 60 pink paisley cake cases with a change of -14. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 33.5,
+          "usage": {
+            "completion_tokens": 106,
+            "prompt_tokens": 965,
+            "total_tokens": 1071,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.796993539487943
+        }
+      ]
+    },
+    {
+      "week": "2011-09-26",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 1870 units, the Small popcorn holder with 1782 units, and the World war 2 gliders asstd designs with 1711 units. The biggest expected change compared to the 4-week average is a 30 percent rise for the Small popcorn holder. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 1870 units, the Small popcorn holder with 1782 units, and the World war 2 gliders asstd designs with 1711 units. The biggest expected change compared to the 4-week average is a 30 percent rise for the Small popcorn holder. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 33.0,
+          "usage": {
+            "completion_tokens": 101,
+            "prompt_tokens": 969,
+            "total_tokens": 1070,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.776311821656918
+        }
+      ]
+    },
+    {
+      "week": "2011-10-03",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Small popcorn holder with 1973 units, the Jumbo bag red retrospot with 1897 units, and the World war 2 gliders asstd designs with 1785 units. The biggest expected rise compared to the 4-week average is for the Small popcorn holder with a change of 21 percent. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Small popcorn holder with 1973 units, the Jumbo bag red retrospot with 1897 units, and the World war 2 gliders asstd designs with 1785 units. The biggest expected rise compared to the 4-week average is for the Small popcorn holder with a change of 21 percent. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 34.7,
+          "usage": {
+            "completion_tokens": 103,
+            "prompt_tokens": 969,
+            "total_tokens": 1072,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.450865961063545
+        }
+      ]
+    },
+    {
+      "week": "2011-10-10",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on stocking the Small popcorn holder with 2390 units, the World war 2 gliders asstd designs with 2350 units, and the Jumbo bag red retrospot with 2131 units. The biggest expected drop compared to the 4-week average is for the Jumbo bag pink polkadot with a change of -37 percent. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on stocking the Small popcorn holder with 2390 units, the World war 2 gliders asstd designs with 2350 units, and the Jumbo bag red retrospot with 2131 units. The biggest expected drop compared to the 4-week average is for the Jumbo bag pink polkadot with a change of -37 percent. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 33.9,
+          "usage": {
+            "completion_tokens": 101,
+            "prompt_tokens": 971,
+            "total_tokens": 1072,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.586794763326038
+        }
+      ]
+    },
+    {
+      "week": "2011-10-17",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on having the most stock for the Jumbo bag red retrospot with 1620 units, the Small popcorn holder with 1496 units, and the Jumbo bag vintage doily with 982 units. The biggest expected drop compared to the 4-week average is -42 percent for the Jumbo bag red retrospot. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "We should focus on having the most stock for the Jumbo bag red retrospot with 1620 units, the Small popcorn holder with 1496 units, and the Jumbo bag vintage doily with 982 units. The biggest expected drop compared to the 4-week average is -42 percent for the Jumbo bag red retrospot. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 31.2,
+          "usage": {
+            "completion_tokens": 92,
+            "prompt_tokens": 968,
+            "total_tokens": 1060,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.374225145606955
+        }
+      ]
+    },
+    {
+      "week": "2011-10-24",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 1913 units, the Small popcorn holder with 1682 units, and the Mini paint set vintage with 1179 units. The biggest expected drop compared to the 4-week average is for the Red harmonica in box with a change vs 4wk avg pct of -53. We have set aside 70254 rows in the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 1913 units, the Small popcorn holder with 1682 units, and the Mini paint set vintage with 1179 units. The biggest expected drop compared to the 4-week average is for the Red harmonica in box with a change vs 4wk avg pct of -53. We have set aside 70254 rows in the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 33.7,
+          "usage": {
+            "completion_tokens": 104,
+            "prompt_tokens": 967,
+            "total_tokens": 1071,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.687178416258215
+        }
+      ]
+    },
+    {
+      "week": "2011-10-31",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 4069 units, the Small popcorn holder with 2713 units, and the World war 2 gliders asstd designs with 2577 units. The biggest expected drop compared with the 4-week average is for the World war 2 gliders asstd designs with a change of -39 percent. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot with 4069 units, the Small popcorn holder with 2713 units, and the World war 2 gliders asstd designs with 2577 units. The biggest expected drop compared with the 4-week average is for the World war 2 gliders asstd designs with a change of -39 percent. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 35.6,
+          "usage": {
+            "completion_tokens": 109,
+            "prompt_tokens": 973,
+            "total_tokens": 1082,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.554002845631613
+        }
+      ]
+    },
+    {
+      "week": "2011-11-07",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on restocking the Jumbo bag red retrospot, Small popcorn holder, and World war 2 gliders asstd designs this week, as they have the highest stock for the busy week with numbers 2611, 2482, and 2481 respectively. The Rabbit night light shows the biggest drop compared to the 4-week average with a change vs 4wk avg pct of -72. The Red harmonica in box also has a significant drop with a change vs 4wk avg pct of -56. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "We should focus on restocking the Jumbo bag red retrospot, Small popcorn holder, and World war 2 gliders asstd designs this week, as they have the highest stock for the busy week with numbers 2611, 2482, and 2481 respectively. The Rabbit night light shows the biggest drop compared to the 4-week average with a change vs 4wk avg pct of -72. The Red harmonica in box also has a significant drop with a change vs 4wk avg pct of -56. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 38.4,
+          "usage": {
+            "completion_tokens": 133,
+            "prompt_tokens": 969,
+            "total_tokens": 1102,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.54109879683094
+        }
+      ]
+    },
+    {
+      "week": "2011-11-14",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Assorted colour bird ornament with 2928 units, the World war 2 gliders asstd designs with 2803 units, and the Small popcorn holder with 2621 units. The biggest expected drop compared to the 4-week average is for the Rabbit night light with a change vs 4wk avg pct of -61. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Assorted colour bird ornament with 2928 units, the World war 2 gliders asstd designs with 2803 units, and the Small popcorn holder with 2621 units. The biggest expected drop compared to the 4-week average is for the Rabbit night light with a change vs 4wk avg pct of -61. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 36.6,
+          "usage": {
+            "completion_tokens": 108,
+            "prompt_tokens": 975,
+            "total_tokens": 1083,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.144908735536413
+        }
+      ]
+    },
+    {
+      "week": "2011-11-21",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on Rabbit night light with 3581 units, Small popcorn holder with 3168 units, and Jumbo bag red retrospot with 2580 units as they have the most stock for the busy week. The biggest expected drop compared to the 4-week average is for Rabbit night light with a change of -60 percent. During the cleaning process, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on Rabbit night light with 3581 units, Small popcorn holder with 3168 units, and Jumbo bag red retrospot with 2580 units as they have the most stock for the busy week. The biggest expected drop compared to the 4-week average is for Rabbit night light with a change of -60 percent. During the cleaning process, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 34.4,
+          "usage": {
+            "completion_tokens": 100,
+            "prompt_tokens": 985,
+            "total_tokens": 1085,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 8.919564181084452
+        }
+      ]
+    },
+    {
+      "week": "2011-11-28",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Red harmonica in box with 2993 units, the Small popcorn holder with 2596 units, and the Rabbit night light with 2592 units. The biggest expected drop compared to the 4-week average is for the Rabbit night light with a change of -58 percent. We have set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Red harmonica in box with 2993 units, the Small popcorn holder with 2596 units, and the Rabbit night light with 2592 units. The biggest expected drop compared to the 4-week average is for the Rabbit night light with a change of -58 percent. We have set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 35.7,
+          "usage": {
+            "completion_tokens": 96,
+            "prompt_tokens": 973,
+            "total_tokens": 1069,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 7.9472822469761
+        }
+      ]
+    }
+  ]
+}

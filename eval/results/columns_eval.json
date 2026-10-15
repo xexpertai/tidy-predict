@@ -1,0 +1,415 @@
+{
+  "model": "gemma-4-E2B-it-Q4_0",
+  "cases": 12,
+  "works": {
+    "rules": 3,
+    "rules_plus_model": 12,
+    "model_alone": 12
+  },
+  "wrong_mappings": {
+    "rules": 0,
+    "rules_plus_model": 0,
+    "model_alone": 0
+  },
+  "median_model_seconds": 7.4,
+  "per_case": [
+    {
+      "headers": [
+        "Invoice",
+        "StockCode",
+        "Description",
+        "Quantity",
+        "InvoiceDate",
+        "Price",
+        "Customer ID",
+        "Country"
+      ],
+      "proposed": {
+        "invoice_date": "InvoiceDate",
+        "quantity": "Quantity",
+        "product": "Description"
+      },
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 8,
+        "truth_fields": 8
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 8,
+        "truth_fields": 8
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 8
+      },
+      "model_seconds": 9.0
+    },
+    {
+      "headers": [
+        "Order No",
+        "SKU",
+        "Item name",
+        "Qty",
+        "Order date",
+        "Unit price"
+      ],
+      "proposed": {
+        "invoice_date": "Order date",
+        "quantity": "Qty",
+        "product": "Item name"
+      },
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 6,
+        "truth_fields": 6
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 6,
+        "truth_fields": 6
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 6
+      },
+      "model_seconds": 8.0
+    },
+    {
+      "headers": [
+        "Bill",
+        "Thing",
+        "How many",
+        "When"
+      ],
+      "proposed": {
+        "invoice_date": "When",
+        "quantity": "How many",
+        "product": "Thing"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_seconds": 7.2
+    },
+    {
+      "headers": [
+        "Bill No",
+        "Maal",
+        "Kitne",
+        "Tarikh",
+        "Rate"
+      ],
+      "proposed": {
+        "invoice_date": "Tarikh",
+        "quantity": "Kitne",
+        "product": "Maal"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 2,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_seconds": 7.5
+    },
+    {
+      "headers": [
+        "Ticket",
+        "Product",
+        "Sold",
+        "Day",
+        "Each"
+      ],
+      "proposed": {
+        "invoice_date": "Day",
+        "quantity": "Sold",
+        "product": "Product"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 1,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_seconds": 7.5
+    },
+    {
+      "headers": [
+        "Created at",
+        "Line item",
+        "Line qty",
+        "Line price",
+        "Order name",
+        "Email"
+      ],
+      "proposed": {
+        "invoice_date": "Created at",
+        "quantity": "Line qty",
+        "product": "Line item"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 6
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 6
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 6
+      },
+      "model_seconds": 7.9
+    },
+    {
+      "headers": [
+        "voucher",
+        "article no",
+        "article",
+        "pieces",
+        "posting date"
+      ],
+      "proposed": {
+        "invoice_date": "posting date",
+        "quantity": "pieces",
+        "product": "article"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 1,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 2,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_seconds": 7.2
+    },
+    {
+      "headers": [
+        "Date of sale",
+        "Code",
+        "Units",
+        "Buyer"
+      ],
+      "proposed": {
+        "invoice_date": "Date of sale",
+        "quantity": "Units",
+        "product": "Code"
+      },
+      "rules": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 2,
+        "truth_fields": 4
+      },
+      "model_seconds": 7.1
+    },
+    {
+      "headers": [
+        "Receipt #",
+        "Menu item",
+        "Count",
+        "Time",
+        "Price ($)"
+      ],
+      "proposed": {
+        "invoice_date": "Time",
+        "quantity": "Count",
+        "product": "Menu item"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 4,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 5,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_seconds": 7.4
+    },
+    {
+      "headers": [
+        "Dispatch date",
+        "Batch",
+        "Variety",
+        "Trays"
+      ],
+      "proposed": {
+        "invoice_date": "Dispatch date",
+        "quantity": "Trays",
+        "product": "Variety"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 1,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_seconds": 7.2
+    },
+    {
+      "headers": [
+        "Fecha",
+        "Producto",
+        "Cantidad",
+        "Precio"
+      ],
+      "proposed": {
+        "invoice_date": "Fecha",
+        "quantity": "Cantidad",
+        "product": "Producto"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 4
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 4
+      },
+      "model_seconds": 6.6
+    },
+    {
+      "headers": [
+        "Txn",
+        "Listing",
+        "Copies",
+        "Paid on",
+        "Shopper"
+      ],
+      "proposed": {
+        "invoice_date": "Paid on",
+        "quantity": "Copies",
+        "product": "Listing"
+      },
+      "rules": {
+        "works": false,
+        "wrong": [],
+        "correct_fields": 0,
+        "truth_fields": 5
+      },
+      "rules_plus_model": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_alone": {
+        "works": true,
+        "wrong": [],
+        "correct_fields": 3,
+        "truth_fields": 5
+      },
+      "model_seconds": 7.0
+    }
+  ],
+  "data_note": "synthetic header sets, see eval/header_variants.json"
+}
