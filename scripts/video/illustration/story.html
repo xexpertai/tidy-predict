@@ -27,14 +27,14 @@ const clamp=(x,a=0,b=1)=>Math.min(b,Math.max(a,x)), ramp=(t,a,d)=>clamp((t-a)/d)
 const lerp=(a,b,p)=>a+(b-a)*p;
 
 /* ---------- static world (2300 wide) ---------- */
-el('rect',{x:0,y:0,width:2300,height:700,fill:'url(#wall)'});
-for(let x=0;x<2300;x+=140)el('rect',{x:x,y:0,width:3,height:700,fill:'#c99a64',opacity:.18});           // wallpaper stripes
-el('rect',{x:0,y:470,width:2300,height:240,fill:'#d9ad7a',opacity:.7});                                    // wainscot
-el('rect',{x:0,y:466,width:2300,height:10,fill:'#a87444'});
-for(let x=0;x<2300;x+=170)el('rect',{x:x+10,y:492,width:150,height:190,rx:6,fill:'none',stroke:'#b9884f',"stroke-width":3,opacity:.55});
-el('rect',{x:0,y:700,width:2300,height:180,fill:'url(#floor)'});
-for(let i=0;i<9;i++)el('line',{x1:0,x2:2300,y1:712+i*i*2.4,y2:712+i*i*2.4,stroke:'#4d2f17',opacity:.35,"stroke-width":2});
-for(let x=-200;x<2400;x+=210)el('line',{x1:x,y1:700,x2:x-(x-1000)*.35,y2:880,stroke:'#4d2f17',opacity:.25,"stroke-width":2});
+el('rect',{x:0,y:0,width:2900,height:700,fill:'url(#wall)'});
+for(let x=0;x<2900;x+=140)el('rect',{x:x,y:0,width:3,height:700,fill:'#c99a64',opacity:.18});           // wallpaper stripes
+el('rect',{x:0,y:470,width:2900,height:240,fill:'#d9ad7a',opacity:.7});                                    // wainscot
+el('rect',{x:0,y:466,width:2900,height:10,fill:'#a87444'});
+for(let x=0;x<2900;x+=170)el('rect',{x:x+10,y:492,width:150,height:190,rx:6,fill:'none',stroke:'#b9884f',"stroke-width":3,opacity:.55});
+el('rect',{x:0,y:700,width:2900,height:180,fill:'url(#floor)'});
+for(let i=0;i<9;i++)el('line',{x1:0,x2:2900,y1:712+i*i*2.4,y2:712+i*i*2.4,stroke:'#4d2f17',opacity:.35,"stroke-width":2});
+for(let x=-200;x<3000;x+=210)el('line',{x1:x,y1:700,x2:x-(x-1000)*.35,y2:880,stroke:'#4d2f17',opacity:.25,"stroke-width":2});
 // window (left) with light
 const win=el('g',{});
 el('rect',{x:60,y:70,width:330,height:330,rx:10,fill:'#bfe3f2'},win);
@@ -79,8 +79,8 @@ const boxG=el('g',{});const boxes=[];
 const bpos=[[1790,700],[1900,700],[1990,700],[1845,622],[1950,622],[1900,544]];
 bpos.forEach(([x,y],i)=>{const g=el('g',{opacity:0},boxG);el('rect',{x:-48,y:-74,width:96,height:74,rx:4,fill:'#c99a5e',stroke:'#9b6f3a',"stroke-width":3},g);el('rect',{x:-48,y:-52,width:96,height:10,fill:'#fff',opacity:.35},g);el('rect',{x:-9,y:-74,width:18,height:74,fill:'#e8d3a8',opacity:.8},g);boxes.push({g,x,y})});
 const boxTag=el('g',{opacity:0});
-el('rect',{x:1700,y:430,width:290,height:56,rx:6,fill:'#fff8dc',stroke:'#8a6d2b',"stroke-width":3,transform:'rotate(-3 1845 458)'},boxTag);
-el('text',{x:1845,y:470,"text-anchor":'middle',"font-size":36,fill:'#4a3a14',transform:'rotate(-3 1845 458)'},boxTag,'nobody asked for these');
+el('rect',{x:1700,y:372,width:290,height:56,rx:6,fill:'#fff8dc',stroke:'#8a6d2b',"stroke-width":3,transform:'rotate(-3 1845 400)'},boxTag);
+el('text',{x:1845,y:412,"text-anchor":'middle',"font-size":36,fill:'#4a3a14',transform:'rotate(-3 1845 400)'},boxTag,'nobody asked for these');
 
 /* ---------- Meera ---------- */
 const SKIN='#c98b62',SKIN2='#b87a52',HAIR='#2a1a14',CARD='#2f6b6b',TOP='#f3e6cc';
@@ -110,7 +110,7 @@ for(let x=60;x<1320;x+=105)el('rect',{x:x+6,y:660,width:93,height:200,rx:5,fill:
 el('rect',{x:40,y:598,width:1300,height:46,rx:8,fill:'#d49a5a'},cnt);el('rect',{x:40,y:598,width:1300,height:8,rx:4,fill:'#e8b878'},cnt);
 el('ellipse',{cx:690,cy:900,rx:700,ry:28,fill:'#000',opacity:.28},world);
 // notebook (open, lying on the counter)
-const nbk=el('g',{transform:'translate(380 600)'});
+const nbk=el('g',{transform:'translate(280 600)'});
 el('path',{d:'M-10 6 L300 6 L330 -64 L-40 -64Z',fill:'#000',opacity:.2,transform:'translate(8 10)'},nbk);
 el('path',{d:'M-20 8 L148 8 L148 -66 L-20 -66 L-34 -66 Z',fill:'#fffdf3',stroke:'#cdbf99'},nbk);
 el('path',{d:'M-30 8 L150 8 L150 -68 L-8 -68Z',fill:'#fffdf3',stroke:'#cdbf99'},nbk);
@@ -123,7 +123,7 @@ const nbTitle=el('text',{x:-6,y:-72,"font-size":22,fill:'#2d3f6b',"font-weight":
 // next-week list on right page (used in "next" mode)
 const listG=el('g',{},nbk);
 // cash register
-const reg=el('g',{transform:'translate(880 600)'});
+const reg=el('g',{transform:'translate(850 600)'});
 el('ellipse',{cx:0,cy:8,rx:120,ry:12,fill:'#000',opacity:.2},reg);
 el('path',{d:'M-100 0 L-84 -108 L84 -108 L100 0Z',fill:'#6d6f78'},reg);
 el('rect',{x:-96,y:-20,width:192,height:24,rx:5,fill:'#53555d'},reg);
@@ -137,14 +137,18 @@ const keyEls=[];for(let r=0;r<3;r++)for(let c=0;c<5;c++){const e=el('rect',{x:-7
 const drawer=el('rect',{x:-96,y:-6,width:192,height:20,rx:5,fill:'#3d3f47',opacity:0},reg);
 
 /* arms (IK) */
-function armDraw(g,sx,sy,hx,hy,bend,color){const L1=130,L2=128;let dx=hx-sx,dy=hy-sy,d=Math.hypot(dx,dy);d=Math.min(d,L1+L2-1);const a=Math.atan2(dy,dx);
- const c=clamp((L1*L1+d*d-L2*L2)/(2*L1*d),-1,1),ang=Math.acos(c)*bend,sa=a+ang;const ex=sx+L1*Math.cos(sa),ey=sy+L1*Math.sin(sa);
- const hx2=sx+d*Math.cos(a),hy2=sy+d*Math.sin(a);const fx=lerp(ex,hx2,.5),fy=lerp(ey,hy2,.5);
+function armDraw(g,sx,sy,hx,hy,bend,color){const L1=140,L2=140;let dx=hx-sx,dy=hy-sy,d=Math.hypot(dx,dy);d=Math.max(60,Math.min(d,L1+L2-2));const a=Math.atan2(dy,dx);
+ const c=clamp((L1*L1+d*d-L2*L2)/(2*L1*d),-1,1),sa=a+Math.acos(c)*bend;const ex=sx+L1*Math.cos(sa),ey=sy+L1*Math.sin(sa);
+ const hx2=sx+d*Math.cos(a),hy2=sy+d*Math.sin(a);const fa=Math.atan2(hy2-ey,hx2-ex)*180/Math.PI;
  g.innerHTML='';
- el('path',{d:`M${sx} ${sy} L${ex} ${ey} L${fx} ${fy}`,stroke:'#1f4d4d',"stroke-width":44,fill:'none',"stroke-linecap":'round',"stroke-linejoin":'round',opacity:.25,transform:'translate(5 7)'},g);
- el('path',{d:`M${sx} ${sy} L${ex} ${ey} L${fx} ${fy}`,stroke:CARD,"stroke-width":40,fill:'none',"stroke-linecap":'round',"stroke-linejoin":'round'},g);
- el('path',{d:`M${fx} ${fy} L${hx2} ${hy2}`,stroke:SKIN,"stroke-width":26,fill:'none',"stroke-linecap":'round'},g);
- el('circle',{cx:hx2,cy:hy2,r:15,fill:SKIN},g);
+ const tube=(x1,y1,x2,y2,w,col)=>el('path',{d:`M${x1} ${y1} L${x2} ${y2}`,stroke:col,"stroke-width":w,fill:'none',"stroke-linecap":'round'},g);
+ tube(sx+4,sy+6,ex+4,ey+6,40,'#1b4343');tube(ex+4,ey+6,hx2+4,hy2+6,36,'#1b4343');          // soft shadow
+ tube(sx,sy,ex,ey,40,CARD);tube(ex,ey,hx2,hy2,35,CARD);                                       // upper arm + forearm sleeve (one piece at the elbow)
+ el('circle',{cx:ex,cy:ey,r:18.5,fill:CARD},g);el('circle',{cx:sx,cy:sy,r:23,fill:CARD},g);   // elbow and shoulder joints
+ const ux=Math.cos(fa*Math.PI/180),uy=Math.sin(fa*Math.PI/180);
+ tube(hx2-ux*20,hy2-uy*20,hx2-ux*14,hy2-uy*14,38,'#e9dcc0');                                  // cuff
+ const h=el('g',{transform:`translate(${hx2} ${hy2}) rotate(${fa})`},g);                       // mitten hand along the forearm
+ el('ellipse',{cx:6,cy:0,rx:19,ry:15,fill:SKIN},h);el('ellipse',{cx:2,cy:-12,rx:11,ry:6,fill:SKIN2,transform:'rotate(-25 2 -12)'},h);
  return [hx2,hy2]}
 const pencil=el('path',{d:'',stroke:'#e8b83a',"stroke-width":7,"stroke-linecap":'round',fill:'none'});const tip=el('path',{d:'',stroke:'#3a2a1a',"stroke-width":7,"stroke-linecap":'round',fill:'none'});
 
@@ -170,7 +174,7 @@ function frame(t){
  let cx=0,cy=0,sc=1;
  if(MODE==='hook'){
   const pan=eo(ramp(t,4.4,1.5));cx=-lerp(0,880,pan);                 // dolly right to the shelves
-  const back=ease(ramp(t,9.4,1.6));cx=cx+880*back*.35;
+  
   sc=1+0.05*ramp(t,0,10)+0.0; cy=-8*ramp(t,0,10);
   cam.setAttribute('transform',`translate(${cx} ${cy}) scale(${sc})`);
  } else { // next: close on the notebook
@@ -202,15 +206,15 @@ function frame(t){
  // register display
  const dd=['?','??','???','?!','?'];dispT.textContent=(MODE==='hook'&&t>1.6&&t<5.2)?dd[Math.floor(t*3)%5]:(MODE==='hook'?'?':'OK');
  // arms
- const sL=[505,392],sR=[685,392];
+ const sL=[510,396],sR=[690,396];
  let lh,rh;
  if(MODE==='hook'){
   // left hand (writes in notebook), right hand (taps register, then rubs forehead)
   const row=Math.min(3,Math.floor(Math.max(0,t-.4)/.65));
-  const wx=380-10+((t*1.3)%1)*80, wy=600-52+row*15;
+  const wx=270+((t*1.3)%1)*80, wy=600-52+row*15;
   lh=[wx+Math.sin(t*14)*9,wy-6+Math.cos(t*19)*4];
   const tap=Math.abs(Math.sin(t*6.5));
-  const kx=880-70+((Math.floor(t*3))%5)*28+10,ky=600-100+((Math.floor(t*3.7))%3)*26;
+  const kx=850-70+((Math.floor(t*3))%5)*28+10,ky=600-100+((Math.floor(t*3.7))%3)*26;
   rh=[kx,ky-tap*34-4];
   const rub=ease(ramp(t,3.2,.5))*(1-ease(ramp(t,5.6,.6)));
   if(rub>0){rh=[lerp(rh[0],640+Math.sin(t*8)*8,rub),lerp(rh[1],205+Math.cos(t*8)*4,rub)]}
@@ -219,14 +223,15 @@ function frame(t){
  } else {
   // next: write three list lines on the right page, tick marks
   const li=Math.min(2,Math.floor(Math.max(0,t-.8)/1.2));const prog=Math.min(1,((t-.8)%1.2)/1.0);
-  lh=[440+Math.sin(t*3)*8,595-12+Math.cos(t*2)*4];
-  rh=[(t<.8?680:(380+170+prog*120+Math.sin(t*16)*6)),(t<.8?500:(600-52+li*15-4+Math.cos(t*20)*3))];
-  if(t>4.2){rh=[760,520+Math.sin(t*2)*4]}
+  // left arm writes on the page beside her, right hand rests on the counter
+  const wr=ease(ramp(t,.3,.5))*(1-ease(ramp(t,4.2,.5)));
+  lh=[lerp(330,280+170+prog*120,wr)+Math.sin(t*16)*5*wr, lerp(570,600-52+li*15-6,wr)+Math.cos(t*20)*3*wr];
+  rh=[745+Math.sin(t*1.3)*3,585];
  }
- // clip hands to above counter edge
- armDraw(armL,sL[0],sL[1],lh[0],lh[1],-1,CARD);armDraw(armR,sR[0],sR[1],rh[0],rh[1],1,CARD);
- let pw=null; if(MODE==='hook'&&t<3.4)pw=lh; if(MODE==='next'&&t>.8&&t<4.2)pw=rh;
- if(pw){pencil.setAttribute('d',`M${pw[0]+16} ${pw[1]-30} L${pw[0]-3} ${pw[1]+10}`);tip.setAttribute('d',`M${pw[0]-3} ${pw[1]+10} L${pw[0]-7} ${pw[1]+17}`)}else{pencil.setAttribute('d','');tip.setAttribute('d','')}
+ // arms: static, relaxed pose resting on the counter (attached at the shoulders; no moving limbs)
+ lh=[405,590];rh=[770,590];
+ armDraw(armL,sL[0],sL[1],lh[0],lh[1],1,CARD);armDraw(armR,sR[0],sR[1],rh[0],rh[1],-1,CARD);
+ pencil.setAttribute('d','M560 580 L632 566');tip.setAttribute('d','M560 580 L553 581');
  // shelves story
  if(MODE==='hook'){
   emptyTag.setAttribute('opacity',ramp(t,5.2,.4));
@@ -237,10 +242,10 @@ function frame(t){
  // list (next)
  if(MODE==='next'){
   listG.innerHTML='';
-  const L=['Busy-week stock','Spares if it beats range','Check the shelf myself'];
+  const L=['Busy-week stock','Spares if over','Check the shelf'];
   L.forEach((s,i)=>{const p=ramp(t,.8+i*1.2,1.0);if(p<=0)return;
-   const txt=el('text',{x:172,y:-52+i*15+11,"font-size":16,fill:'#233a7a'},listG,s.slice(0,Math.ceil(s.length*p)));
-   if(t>1.7+i*1.2)el('path',{d:`M158 ${-48+i*15} l4 5 l8 -10`,stroke:'#1d9b57',"stroke-width":3,fill:'none',"stroke-linecap":'round'},listG)});
+   const txt=el('text',{x:166,y:-52+i*15+11,"font-size":15,fill:'#233a7a'},listG,s.slice(0,Math.ceil(s.length*p)));
+   if(t>1.7+i*1.2)el('path',{d:`M152 ${-48+i*15} l4 5 l8 -10`,stroke:'#1d9b57',"stroke-width":3,fill:'none',"stroke-linecap":'round'},listG)});
  }
 }
 /* z-order: arms above counter props */
