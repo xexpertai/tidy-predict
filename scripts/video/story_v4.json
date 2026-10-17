@@ -1,0 +1,120 @@
+{
+ "_note": "v4 narration and cut list. 'src' = two events from demo/raw-v4/timeline.json with offsets; 'crop' = x,y,w,h of the 1920x1080 frame (plain zoom); scenes with speed_video > 1 carry a 'label' saying so. Numbers come from the recorded run's run.json and eval/results. Edit the numbers scenes after each new recording.",
+ "scenes": [
+  {
+   "id": "hook1",
+   "src": "preview shown+0.4..preview shown+3.2",
+   "crop": [
+    360,
+    290,
+    1000,
+    562
+   ],
+   "fade_in": true,
+   "caption": "Demo data: a public gift-shop export, headers renamed Bill No, Maal, Kitne, Tarikh",
+   "text": "Someone I know runs a shop and tracks stock by hand. Some weeks the fast sellers run out. Other weeks the shelf fills with things nobody wants."
+  },
+  {
+   "id": "hook2",
+   "src": "report+1.2..report+5.5",
+   "crop": [
+    320,
+    60,
+    1280,
+    720
+   ],
+   "caption": "The restock note it gives back, on one laptop",
+   "text": "tidy-predict reads the order export and writes next week's restock note."
+  },
+  {
+   "id": "upload",
+   "src": "home+0.3..preview shown+1.2",
+   "fit": "speed",
+   "caption": "Drop the file in; the page shows the first rows as sent",
+   "text": "Drop the file in. The page shows the first rows as sent."
+  },
+  {
+   "id": "form",
+   "src": "date typed-2.2..submitted+0.3",
+   "fit": "speed",
+   "caption": "Replay a past week, label the data, go",
+   "text": "Pick a week to replay, label the data, go."
+  },
+  {
+   "id": "columns",
+   "src": "log: Read-0.3..log: Columns found+3.0",
+   "crop": [
+    240,
+    140,
+    1440,
+    810
+   ],
+   "caption": "Headers the rules cannot place go to Gemma, running locally",
+   "text": "Odd headers go to Gemma, running locally: Tarikh is the date, Kitne the quantity, Maal the product.",
+   "say": "Odd headers go to Gemma, running locally: Taareekh is the date, Kitney the quantity, Maal the product.",
+   "fit": "speed",
+   "label": "Sped up"
+  },
+  {
+   "id": "forecast",
+   "src": "log: Cleaned-0.2..log: Forecast done+0.6",
+   "fit": "speed",
+   "label": "Sped up",
+   "caption": "Cleaned, nothing deleted silently. TabPFN-2 forecasts the 20 regular sellers",
+   "text": "A million rows cleaned, then TabPFN-2 forecasts the twenty regular sellers.",
+   "say": "A million rows cleaned, then Tab P F N two forecasts the twenty regular sellers."
+  },
+  {
+   "id": "note",
+   "src": "log: Writing-0.2..state: done+2.0",
+   "fit": "speed",
+   "label": "Sped up",
+   "caption": "Gemma writes the note; code checks every number in it",
+   "text": "Gemma writes the note; code checks every number against the table."
+  },
+  {
+   "id": "report",
+   "src": "report+0.8..report+6.0",
+   "crop": [
+    320,
+    60,
+    1280,
+    720
+   ],
+   "caption": "What to have ready for a busy week",
+   "text": "What to have ready for a busy week."
+  },
+  {
+   "id": "table",
+   "src": "table-0.5..row: Rabbit night light+4.2",
+   "caption": "A likely range per product, and what really sold",
+   "text": "A likely range per product, and what really sold: seventeen of twenty inside."
+  },
+  {
+   "id": "rabbit",
+   "src": "row: Rabbit night light+0.3..row: Rabbit night light+4.0",
+   "crop": [
+    240,
+    270,
+    1440,
+    810
+   ],
+   "caption": "The miss: rabbit night light, 4,452 sold vs a 2,592 busy-week number",
+   "text": "The miss, kept in: rabbit night lights sold far above their range."
+  },
+  {
+   "id": "cleaned",
+   "src": "cleaned-1.0..footer+2.5",
+   "fit": "speed",
+   "caption": "Open, local, licensed for paid use",
+   "text": "Everything cleaned is listed. Open models, local, licensed for paid use."
+  },
+  {
+   "id": "end",
+   "src": "card:end",
+   "min": 2.7,
+   "text": "Built with PriorLabs-TabPFN.",
+   "say": "Built with Prior Labs Tab P F N."
+  }
+ ]
+}

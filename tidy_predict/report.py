@@ -20,6 +20,9 @@ th:first-child,td:first-child{text-align:left}th{font-weight:600;color:var(--mut
 td.n{font-variant-numeric:tabular-nums;white-space:nowrap}.bar{display:inline-block;vertical-align:middle;margin-right:8px;height:8px;background:var(--accent);border-radius:4px;opacity:.75}
 .tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:10px;background:#f3ead7;color:#6b4e12}
 footer{margin-top:32px;color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:12px}
+.flag{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:10px;margin-left:6px;background:#ffe2a8;color:#7a4300}
+tr.above td{background:#fff3da}tr.above td:first-child{box-shadow:inset 4px 0 0 #e08a00}td.n.above b,td.n.above{color:#7a4300;font-weight:700}
+tr.below td{background:#eef1f6}tr.below td:first-child{box-shadow:inset 4px 0 0 #6b7fa8}.flag.low{background:#dbe3f2;color:#27406e}
 .built{font-weight:600;color:var(--fg)}
 .scroll{overflow-x:auto}
 """
@@ -36,12 +39,17 @@ def render(facts: dict, note_text: str, note_author: str, clean_stats: dict, dat
     rows = []
     for d in items:
         w = int(110 * d["stock_for_busy_week"] / top)
-        act = ""
+        act, cls = "", ""
         if actuals is not None:
             a = actuals.get(d["product"])
-            act = f"<td class=n>{'' if a is None else int(a)}</td>"
+            if a is not None and a > d["stock_for_busy_week"]:
+                cls, act = " class=above", f"<td class='n above'>{int(a):,}<span class=flag>sold above range</span></td>"
+            elif a is not None and a < d["low_units"]:
+                cls, act = " class=below", f"<td class=n>{int(a):,}<span class='flag low'>sold below range</span></td>"
+            else:
+                act = f"<td class=n>{'' if a is None else int(a)}</td>"
         rows.append(
-            f"<tr><td>{_e(d['product'])}</td><td class=n>{d['last_week_units']}</td>"
+            f"<tr{cls}><td>{_e(d['product'])}</td><td class=n>{d['last_week_units']}</td>"
             f"<td class=n>{d['avg_last_4_weeks']}</td><td class=n><b>{d['expected_units']}</b></td>"
             f"<td class=n>{d['low_units']}&ndash;{d['stock_for_busy_week']}</td>"
             f"<td class=n><span class=bar style='width:{w}px'></span> <b>{d['stock_for_busy_week']}</b></td>{act}</tr>")

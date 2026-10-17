@@ -37,8 +37,13 @@ def resolve_columns(raw: pd.DataFrame, use_llm: bool, log) -> tuple[dict, str]:
         sample = raw.head(3).astype(str).values.tolist()
         try:
             proposed, info = llm.map_columns(headers, sample)
+            before = dict(mapping)
             mapping = columns.fill_gaps(mapping, proposed, headers)
+            added = {f: h for f, h in mapping.items() if f not in before}
             how = f"header rules + local model ({info['seconds']} s)"
+            if added:
+                shown = ", ".join(f"{h} \u2192 {columns.PLAIN.get(f, f)}" for f, h in added.items())
+                log(f"  {len(added)} header(s) the rules couldn't place, read by the local model: {shown}")
         except (llm.LLMUnavailable, ValueError) as e:
             log(f"  local model could not map columns: {e}")
     miss = columns.missing_required(mapping)

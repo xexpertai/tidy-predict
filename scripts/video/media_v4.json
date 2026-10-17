@@ -1,0 +1,97 @@
+{
+ "gifs": [
+  {
+   "name": "demo-run",
+   "segments": [
+    {
+     "a": "home+0.3",
+     "b": "preview shown+1.5"
+    },
+    {
+     "a": "date typed-2.0",
+     "b": "submitted+0.3",
+     "speed": 3,
+     "label": "Sped up 3x"
+    },
+    {
+     "a": "log: Read-0.3",
+     "b": "log: Columns found+3.0",
+     "speed": 4,
+     "label": "Sped up 4x",
+     "crop": [
+      240,
+      140,
+      1440,
+      810
+     ]
+    }
+   ]
+  },
+  {
+   "name": "restock-note",
+   "segments": [
+    {
+     "a": "report+1.0",
+     "b": "report+4.5"
+    },
+    {
+     "a": "table-0.5",
+     "b": "row: Rabbit night light+3.5",
+     "speed": 1.3
+    }
+   ]
+  }
+ ],
+ "shots": [
+  {
+   "name": "1-drop-the-export",
+   "src": "home-preview.png",
+   "crop": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  {
+   "name": "2-run-log-gemma-maps-headers",
+   "src": "job-log.png",
+   "crop": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  {
+   "name": "3-restock-note-checked",
+   "src": "report-top.png",
+   "crop": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  {
+   "name": "4-table-rabbit-night-light-miss",
+   "src": "report-table.png",
+   "crop": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  },
+  {
+   "name": "5-cleaned-and-footer",
+   "src": "report-bottom.png",
+   "crop": [
+    0,
+    0,
+    1920,
+    1080
+   ]
+  }
+ ]
+}

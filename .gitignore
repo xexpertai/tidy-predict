@@ -11,3 +11,9 @@ runs/
 demo/build/
 demo/raw/
 demo/raw-report/
+demo/raw-v4*/
+demo/raw-v4*.log
+demo/build-v4/
+demo/final-v4/GATE.md
+demo/build-v5/
+demo/final-v5/GATE.md

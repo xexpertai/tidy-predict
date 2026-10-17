@@ -192,7 +192,7 @@ python eval/tie_analysis.py eval/results                            # week wins,
 python eval/sheet_overlap.py data/raw/online_retail_II.xlsx eval/results   # where the duplicates come from
 eval/offline_check.sh                                               # the forecast with no network at all
 eval/run_with_model.sh                                              # Gemma: header mapping, notes, demo run
-pytest                                                              # 27 tests, no model needed
+pytest                                                              # 28 tests, no model needed
 ```
 
 **Offline:** once the weights are downloaded, the forecast works with networking switched off. This was checked

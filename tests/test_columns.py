@@ -42,3 +42,12 @@ def test_model_cannot_override_rules_reuse_headers_or_invent():
     proposed = {"invoice_date": "Order No", "quantity": "Units", "product": "SKU"}
     m = columns.fill_gaps(rule, proposed, h)
     assert m == rule                                  # reused / invented headers ignored, product already known
+
+
+def test_model_may_name_products_when_rules_only_found_the_code():
+    h = ["Bill No", "Item Code", "Maal", "Kitne", "Tarikh", "Rate"]
+    rule = columns.rule_map(h)                       # invoice, stock_code, price from rules
+    assert "description" not in rule
+    m = columns.fill_gaps(rule, {"invoice_date": "Tarikh", "quantity": "Kitne", "product": "Maal"}, h)
+    assert m["stock_code"] == "Item Code" and m["description"] == "Maal"
+    assert m["invoice_date"] == "Tarikh" and m["quantity"] == "Kitne"

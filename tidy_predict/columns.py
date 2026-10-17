@@ -21,6 +21,7 @@ FIELDS: dict[str, list[str]] = {
     "country": ["country", "region", "market"],
 }
 REQUIRED = ("invoice_date", "quantity")
+PLAIN = {"invoice_date": "date", "quantity": "quantity", "description": "product", "stock_code": "product code"}
 ONE_OF = ("stock_code", "description")  # need at least one to know *what* sold
 
 
@@ -74,8 +75,8 @@ def validate_mapping(mapping: dict, headers: list[str]) -> dict[str, str]:
 
 
 def fill_gaps(rule: dict[str, str], proposed: dict, headers: list[str]) -> dict[str, str]:
-    """Policy for the model's answer: it may only fill REQUIRED gaps the header rules left, never
-    override a rule match, never reuse a header, and its product column is used as the product name."""
+    """Policy for the model's answer: it may only fill gaps the header rules left (the required fields,
+    plus the product-name column), never override a rule match, never reuse a header."""
     out = dict(rule)
     used = set(out.values())
     for f in ("invoice_date", "quantity", "product"):
@@ -83,9 +84,9 @@ def fill_gaps(rule: dict[str, str], proposed: dict, headers: list[str]) -> dict[
         if not isinstance(h, str) or h not in headers or h in used:
             continue
         if f == "product":
-            if any(k in out for k in ONE_OF):
+            if "description" in out:
                 continue
-            out["description"] = h
+            out["description"] = h  # names the products; the code column (if any) still identifies them
         elif f not in out:
             out[f] = h
         else:
