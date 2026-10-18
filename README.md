@@ -18,16 +18,19 @@ AI API: the shop's customer and order data stays on the machine that runs the to
 
 ## Demo video
 
-[`demo/tidy-predict-demo.mp4`](demo/tidy-predict-demo.mp4) (83 s, voiceover; it ends with the honest numbers, including the rabbit night light miss). It shows one real run through the
-local web page on the full demo file. How it was edited:
-- the live log is sped up about 10× and labelled on screen (the run took 113 s, while the screen recorder and other
-  jobs shared the CPU);
-- the report is shown as still screenshots of that same run's report, re-rendered from its `run.json` after a
-  layout-only fix (the busy-week number now sits next to its bar). The numbers and Gemma's note are the run's own;
-- the narration was voiced locally with Kokoro.
+Why it exists: the author knows a shop that manages its stock by hand and makes many mistakes. That shop has not used this tool, and nobody has; the demo uses a fictional shop and public data.
 
-QA (`demo/qa.json`): 1920×1080, −14.64 LUFS, true peak −1.38 dBTP, no silence longer than 0.6 s. Every frame
-(one per 2 s) was checked at full size.
+[`docs/media/tidy-predict-demo-v9.mp4`](docs/media/tidy-predict-demo-v9.mp4) (42 s, narrated). It opens on the miss: the forecast
+said 1,249 rabbit night lights for the week of 28 Nov 2011, the shop sold 4,452. Then one real run (export in, restock
+note out) and the honest verdict (17 of 20 products inside their range; the rabbit night light was not).
+- The shop is **fictional**: a small online gift shop. The data is **demo data**: the public UK gift-shop export described
+  above, replayed as of 27 Nov 2011. It is not a client, and nobody has used the tool on a real shop. The column headers are
+  plain English ("Order No, SKU, Item, Pieces, Day Sold, Unit Price, Customer, Country"); the header rules cannot place
+  "Pieces" and "Day Sold", so Gemma reads those two.
+- It shows one real run through the local web page on the full demo file (`eval/record_v9.sh`). The log is sped up and labelled
+  on screen (the run took 147 s on a laptop CPU, with a browser recording alongside). Every number on screen is the run's own.
+- Narration is an AI voice generated from my own voice sample (open-source Chatterbox, MIT), disclosed in the video. It is not
+  a live recording. No person is drawn in the video.
 
 ### Reading the replayed week (28 Nov 2011) honestly
 
@@ -36,10 +39,40 @@ QA (`demo/qa.json`): 1920×1080, −14.64 LUFS, true peak −1.38 dBTP, no silen
   so a good model expects less than the recent average. The simple rule learned the same thing on the validation
   weeks: its tuned middle factor is k = 0.78. In the week of 28 Nov, at the start of the December rush, that
   pattern broke. Rabbit night lights, expected to drop 58%, sold 4,452 (its second-best week in the data).
-- **Why the note starts with Red harmonica in box (2,993).** The note leads with the three highest "stock for a busy
-  week" (P90) numbers, by design. A lumpy wholesale item like this one (22 sold last week, 918 a week on average
-  over the last 4) gets a very wide range, so its P90 is high even though its expected number (512) isn't. The P90
-  is a ceiling for a busy week, not a prediction. It sold 1,120.
+- **The harmonica problem, and the fix (v9).** An earlier note told the shop to have 2,993 Red harmonicas ready, an item that
+  sold 22 the week before (918 a week on average over 4 weeks, forecast range 44 to 2,993; it sold 1,120). That P90 is a ceiling
+  for a very lumpy item, not advice. Now any product whose P90 is more than 10 times its P10, or whose last week was under a
+  quarter of its 4-week average, carries a **"wide range: check by hand"** flag in the table, is left out of the "most stock"
+  sentence and the rise/drop/sell-out sentences, and is named in a separate "check by hand" sentence with no stock number.
+  In the 28 Nov 2011 replay it flags Red harmonica in box and Pack of 12 london tissues.
+
+### Chance of selling out
+
+Each product also gets `sell_out_chance_pct`: the chance that the week's demand is above what the shop would have if it
+stocked **the busiest of its last 4 weeks** (the data has no real stock levels, so that level stands in). It is read from the
+TabPFN-2 forecast distribution (19 quantiles, P5 to P95, linear in between, never shown below 5% or above 95%).
+
+**What changed in v9, and how it was chosen.** v8 used the 4-week *average* as the stand-in. That version lost to a constant
+(`eval/results/sellout_v2.json`): Brier 0.250 against 0.241 for always saying the base rate. `eval/sellout_recalibrate.py` tests a fix
+without peeking: the 12 backtest weeks are split by time (fit = weeks 1-6, validation = weeks 7-9, test = weeks 10-12), the split is
+fixed before looking at any result, and the method is picked on validation only. Candidates: stock stand-in (4-week mean, 4-week max)
+x calibration (none, Platt, isotonic). Validation picked **4-week max, no calibration** (Brier 0.1765, against 0.2131 for a constant);
+Platt and isotonic were worse there (0.1899, 0.1828). Results are in `eval/results/sellout_recalibrated.json`.
+
+On the untouched test weeks (60 product-weeks, only 5 went above the stand-in): Brier **0.0903** against 0.0942 for a constant.
+That is a win by a hair on very few events, so read it as "no longer worse than a constant", not as proof. On all 240 product-weeks
+(no fitting involved, but the stand-in was picked on weeks 7-9): Brier 0.143 against 0.150, rank quality (AUC) 0.67, and the third
+of product-weeks flagged highest went above the stand-in **27.5%** of the time, the lowest third **8.8%**. Test-week reliability is
+rough (predicted 13% where 4% happened; predicted 40% where 9% happened), so it is **a ranking signal, not a probability to bet on**.
+- In the replayed week (28 Nov 2011) it said 5% for the rabbit night light (stand-in stock 4,265, demand 4,452: above it by a little)
+  and its two highest flags (67%, 47%) sold 148 and 689 against busiest-of-4 levels of 272 and 1,170. They did not sell out.
+
+### Newer TabPFN versions
+
+Only TabPFN-2 ships (Apache 2.0 plus attribution, so a paid service can be built on it). `eval/backtest_versions.py` runs the same
+240 product-weeks on any other version (`v2.5`, `v3.5`). Those weights need a Prior Labs account with a one-time licence
+acceptance (`export TABPFN_TOKEN=...`) and are non-commercial, so they are for evaluation only. **That comparison has not been run**:
+no account was created for this entry (the download stops with `TabPFNLicenseError`).
 
 ## Who it's for
 
@@ -138,8 +171,9 @@ WAPE = total absolute error ÷ total units sold (`backtest_summary.json`).
 Gemma 4 E2B (Q4_0 GGUF, 2.8 GB) through llama.cpp on the same CPU, with "thinking" switched off. Files in
 `eval/results/`.
 
-- **Notes:** one restock note for each of the 12 test weeks (`note_eval.json`). **12 of 12 passed the number
-  check on the first draft**, so 0 drafts were rejected. The median was 35.8 s per note.
+- **Notes:** one restock note for each of the 12 test weeks (`note_eval.json`, current prompt including the sell-out
+  sentence; all 12 notes mention it). **12 of 12 passed the number check on the first draft**, so 0 drafts were rejected.
+  The median was 37.9 s per note (35.8 s with the earlier prompt without that sentence, `note_eval_v7prompt.json`).
   - The first version of the prompt (`note_eval_v1.json`) also passed 12/12. Reading the notes by hand showed two
     problems the checker can't catch. Some notes echoed field names ("change vs 4wk avg pct of -53"). And "the
     biggest change" was judged only over the 8 items Gemma was shown. So the biggest rise and drop are now
@@ -153,9 +187,9 @@ Gemma 4 E2B (Q4_0 GGUF, 2.8 GB) through llama.cpp on the same CPU, with "thinkin
   - Gemma was then limited to the *required* gaps only (date, quantity, which column names the product). That gives
     **12 of 12, 0 wrong**, median 7.4 s (`columns_eval.json`). These are the same cases that were looked at while
     fixing it, so treat 12/12 as optimistic.
-- **A full run** on the 1,067,371-row demo file, with the note written by Gemma, took **52 s** from the command
-  line: 16 s of that was the TabPFN-2 forecast, and the app peaked at 1.36 GB. The recorded web run in the video
-  took 113 s, because the screen recorder and other jobs were sharing the CPU. llama-server showed about 2.6 GB
+- **A full run** on the 1,067,371-row demo file, with the note written by Gemma, took **54 s** from the command
+  line (40 s without Gemma), and the app peaked at 1.36 GB. The recorded web run in the video
+  took 147 s, because the screen recorder and other jobs were sharing the CPU. llama-server showed about 2.6 GB
   RSS, most of it the memory-mapped model file.
 
 ## Run it
@@ -189,10 +223,11 @@ python eval/select_model.py eval/results                            # validation
 python eval/backtest.py eval/results 12                             # final test
 python eval/interval_baseline.py eval/results
 python eval/tie_analysis.py eval/results                            # week wins, tuned 4-week-mean rival, stocking
+python eval/sellout_recalibrate.py eval/results                     # sell-out chance: fit / validation / test split, writes sellout_recalibrated.json
 python eval/sheet_overlap.py data/raw/online_retail_II.xlsx eval/results   # where the duplicates come from
 eval/offline_check.sh                                               # the forecast with no network at all
 eval/run_with_model.sh                                              # Gemma: header mapping, notes, demo run
-pytest                                                              # 28 tests, no model needed
+pytest                                                              # 31 tests, no model needed
 ```
 
 **Offline:** once the weights are downloaded, the forecast works with networking switched off. This was checked

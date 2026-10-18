@@ -1,0 +1,132 @@
+{
+ "_note": "v9 cut (<=45 s). Hook = the real report with 'sold above range' on the rabbit night light. One shop (fictional online gift shop), one dataset (public UK gift-shop export, replayed as of 27 Nov 2011). Gap 4: one true line from KB/HARSHA-VOICE-W2.md (a shop Harsha knows counts stock by hand and makes many mistakes; not named, not a user). Gap 3: harmonica flagged 'wide range: check by hand'. All numbers come from the recorded run (demo/raw-v9, runs/20261018-021715-be140b) and eval/results.",
+ "scenes": [
+  {
+   "id": "s01_hook",
+   "src": "row: Rabbit night light-1.0..row: Rabbit night light+3.5",
+   "fit": "speed",
+   "labels": [
+    "Demo data",
+    "Replay"
+   ],
+   "zoom": [
+    200,
+    225,
+    1520,
+    855
+   ],
+   "zoom_at": 0.2,
+   "zoom_dur": 1.0,
+   "caption": "Week of 28 Nov 2011. Rabbit night light: expected 1,249, really sold 4,452",
+   "text": "The forecast said one thousand two hundred forty-nine rabbit night lights. The shop sold four thousand four hundred fifty-two.",
+   "speed": 1.0
+  },
+  {
+   "id": "s02_why",
+   "src": "home+0.3..label typed+1.2",
+   "fit": "speed",
+   "labels": [
+    "Fictional shop",
+    "Demo data",
+    "Sped up"
+   ],
+   "caption": "I built it for a shop I know that counts stock by hand. Demo: fictional owner, public UK data",
+   "text": "I know a shop that tracks its stock by hand, and makes many mistakes. So I built this. The owner here is fictional, and the data is a public UK file.",
+   "speed": 1.0
+  },
+  {
+   "id": "s03_gemma",
+   "src": "log: Read+0.5..log: Columns found+2.0",
+   "fit": "speed",
+   "labels": [
+    "Sped up",
+    "Local model"
+   ],
+   "zoom": [
+    220,
+    145,
+    1480,
+    832
+   ],
+   "zoom_at": 0.6,
+   "zoom_dur": 1.3,
+   "caption": "Headers the rules cannot place (Pieces, Day Sold) go to Gemma, on this laptop",
+   "text": "Gemma, on the laptop, reads two headers the rules can't place.",
+   "speed": 1.0
+  },
+  {
+   "id": "s04_run",
+   "src": "log: Cleaned-0.2..state: done+1.0",
+   "fit": "speed",
+   "labels": [
+    "Sped up"
+   ],
+   "caption": "Real run: 147 s on a laptop CPU, log sped up. TabPFN-2 forecasts, Gemma writes the note",
+   "text": "Code cleans a million order lines. Tab P F N forecasts twenty sellers, with a range for each.",
+   "speed": 1.0
+  },
+  {
+   "id": "s05_note",
+   "src": "report+0.2..report+6.5",
+   "labels": [
+    "Demo data",
+    "Highlight added"
+   ],
+   "highlight": [
+    [
+     664,
+     346,
+     980,
+     38
+    ],
+    [
+     258,
+     384,
+     1290,
+     38
+    ],
+    [
+     244,
+     742,
+     262,
+     32
+    ]
+   ],
+   "zoom": [
+    210,
+    60,
+    1500,
+    844
+   ],
+   "zoom_at": 0.3,
+   "zoom_dur": 1.0,
+   "caption": "The note flags a wide range: check by hand. Code checks every number",
+   "text": "The note now flags a wide range: check by hand. Here, that is the red harmonica and the london tissues. Code checks every number.",
+   "speed": 1.0
+  },
+  {
+   "id": "s06_miss",
+   "src": "row: Red harmonica-0.3..row: Rabbit night light+2.0",
+   "labels": [
+    "The honest miss"
+   ],
+   "zoom": [
+    200,
+    225,
+    1520,
+    855
+   ],
+   "zoom_at": 0.2,
+   "zoom_dur": 1.0,
+   "caption": "17 of 20 inside their range. Rabbit night light sold above it (sell-out chance said 5 percent)",
+   "text": "Seventeen of twenty sold inside their range. The rabbit night light did not, and its chance of selling out said five percent.",
+   "speed": 1.0
+  },
+  {
+   "id": "s07_end",
+   "src": "card:end",
+   "text": "Built with Prior Labs, Tab P F N. By Harsha Shinde.",
+   "speed": 1.0
+  }
+ ]
+}

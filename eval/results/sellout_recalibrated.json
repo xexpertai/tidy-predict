@@ -1,0 +1,114 @@
+{
+ "split": {
+  "fit_weeks": [
+   "2011-09-12",
+   "2011-09-19",
+   "2011-09-26",
+   "2011-10-03",
+   "2011-10-10",
+   "2011-10-17"
+  ],
+  "val_weeks": [
+   "2011-10-24",
+   "2011-10-31",
+   "2011-11-07"
+  ],
+  "test_weeks": [
+   "2011-11-14",
+   "2011-11-21",
+   "2011-11-28"
+  ]
+ },
+ "validation": [
+  {
+   "stock_reference": "4-week mean",
+   "calibration": "constant (base rate of fit weeks)",
+   "brier": 0.2545
+  },
+  {
+   "stock_reference": "4-week mean",
+   "calibration": "none",
+   "brier": 0.2327
+  },
+  {
+   "stock_reference": "4-week mean",
+   "calibration": "platt",
+   "brier": 0.2449
+  },
+  {
+   "stock_reference": "4-week mean",
+   "calibration": "isotonic",
+   "brier": 0.2452
+  },
+  {
+   "stock_reference": "4-week max",
+   "calibration": "constant (base rate of fit weeks)",
+   "brier": 0.2131
+  },
+  {
+   "stock_reference": "4-week max",
+   "calibration": "none",
+   "brier": 0.1765
+  },
+  {
+   "stock_reference": "4-week max",
+   "calibration": "platt",
+   "brier": 0.1899
+  },
+  {
+   "stock_reference": "4-week max",
+   "calibration": "isotonic",
+   "brier": 0.1828
+  }
+ ],
+ "test": {
+  "n": 60,
+  "share_really_above": 0.083,
+  "brier_chosen_method": 0.0903,
+  "brier_constant_base_rate": 0.0942,
+  "brier_uncalibrated_same_reference": 0.0903,
+  "brier_original_4wk_mean_uncalibrated": 0.2717,
+  "beats_constant": true,
+  "auc_ranking_chosen": 0.72,
+  "auc_ranking_original_raw_all_240": 0.574,
+  "reliability": [
+   {
+    "predicted_range": "0-30%",
+    "n": 45,
+    "mean_predicted_pct": 13.0,
+    "really_above_pct": 4.4
+   },
+   {
+    "predicted_range": "30-50%",
+    "n": 11,
+    "mean_predicted_pct": 39.7,
+    "really_above_pct": 9.1
+   },
+   {
+    "predicted_range": "50-100%",
+    "n": 4,
+    "mean_predicted_pct": 64.1,
+    "really_above_pct": 50.0
+   }
+  ]
+ },
+ "chosen_on_validation": {
+  "stock_reference": "4-week max",
+  "calibration": "none",
+  "val_brier": 0.1765
+ },
+ "ranking_all_240_raw": {
+  "top_third_really_above_pct": 48.8,
+  "bottom_third_really_above_pct": 35.0,
+  "auc": 0.574
+ },
+ "all_240_uncalibrated_4wk_max": {
+  "share_really_above": 0.183,
+  "brier": 0.1426,
+  "brier_constant_base_rate": 0.1497,
+  "auc": 0.673,
+  "note": "no fitting involved, but the reference was picked on weeks 7-9, so read the test block as the headline",
+  "top_third_really_above_pct": 27.5,
+  "bottom_third_really_above_pct": 8.8
+ }
+}

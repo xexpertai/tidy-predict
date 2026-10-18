@@ -50,7 +50,7 @@ def status(d, a):
 FLAG = {"above": '<span class="flag above"><span aria-hidden=true>&#9650;</span> Sold above range</span>',
         "below": '<span class="flag below"><span aria-hidden=true>&#9660;</span> Sold below range</span>',
         "inside": '<span class="flag inside"><span aria-hidden=true>&#10003;</span> Inside range</span>'}
-SWING = "Sales of this item swing a lot week to week."
+SWING = "Wide range: check by hand. Do not order from this row alone."
 
 st = {i["product"]: status(i, act[i["product"]]) for i in items}
 n = len(items)
@@ -61,20 +61,24 @@ rows, cards = [], []
 for d in items:
     nm, a = d["product"], act[d["product"]]
     s, h = st[nm], hist(nm)
-    wide = d["stock_for_busy_week"] >= WIDE * max(d["low_units"], 1)
+    wide = bool(d.get("check_by_hand"))
     sw = f'<div class=swing>{SWING}</div>' if wide else ""
     rng = f'{d["low_units"]:,}&ndash;{d["stock_for_busy_week"]:,}'
+    KG = " greyed" if wide else ""
+    KV = "check by hand" if wide else format(d["stock_for_busy_week"], ",")
     rows.append(
         f'<tr class="{s}"><th scope=row class=prod>{e(nm)}{sw}</th>'
         f'<td class=spk>{spark(h, nm)}</td><td class=n>{d["expected_units"]:,}</td>'
         f'<td class=n>{rng}{rangebar(d, a)}</td>'
-        f'<td class="n keep">{d["stock_for_busy_week"]:,}</td>'
+        + (f'<td class="n keep greyed">check by hand</td>' if d.get("check_by_hand") else f'<td class="n keep">{d["stock_for_busy_week"]:,}</td>') +
+        f'<td class="n risk"><b>{d["sell_out_chance_pct"]}%</b></td>'
         f'<td class="n sold {s}"><b>{int(a):,}</b>{FLAG[s]}</td></tr>')
     cards.append(
         f'<li class="card {s}"><h3>{e(nm)}</h3>{sw}<div class=cspk><span>Past {len(h)} weeks</span>{spark(h, nm)}</div>'
         f'<dl><div><dt>Expected</dt><dd>{d["expected_units"]:,}</dd></div>'
         f'<div><dt>Likely range</dt><dd>{rng}</dd></div>'
-        f'<div class=keepc><dt>Keep for a busy week</dt><dd>{d["stock_for_busy_week"]:,}</dd></div>'
+        f'<div class="keepc{KG}"><dt>Keep for a busy week</dt><dd>{KV}</dd></div>'
+        f'<div class=riskc><dt>Chance of selling out*</dt><dd>{d["sell_out_chance_pct"]}%</dd></div>'
         f'<div class="soldc {s}"><dt>Actually sold</dt><dd>{int(a):,}</dd></div></dl>'
         f'{rangebar(d, a)}<div class=cflag>{FLAG[s]}</div></li>')
 
@@ -118,6 +122,7 @@ thead th:first-child{text-align:left}
 tbody th,tbody td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
 tbody th{text-align:left;font-weight:600}td.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 td.spk{color:#4a6a5a;text-align:right;width:120px}.spark{display:block;margin-left:auto}
+.greyed{color:#8a8a84!important;font-style:italic;font-weight:400}.greyed dd,.greyed b{color:#8a8a84!important;font-weight:400}
 .swing{font-weight:400;font-size:12.5px;color:var(--muted);margin-top:2px}
 td.keep{font-weight:700;background:#f6f3ea;border-left:1px solid var(--line)}
 td.sold{background:#f6f3ea;border-right:1px solid var(--line);min-width:150px}td.sold b{display:block;font-size:16px}
@@ -138,7 +143,8 @@ tr.below td.sold,.soldc.below{background:var(--below-bg);box-shadow:inset 4px 0 
 .cspk span{color:var(--muted)}.cspk .spark{margin:0}
 .card dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 0}.card dl div{padding:8px 10px;background:#f6f3ea;border-radius:8px}
 .card dt{font-size:12px;color:var(--muted)}.card dd{margin:0;font-size:19px;font-weight:700;font-variant-numeric:tabular-nums}
-.card dl .keepc{grid-row:2;grid-column:1}.card dl .soldc{grid-row:2;grid-column:2}
+.card dl .keepc{grid-row:2;grid-column:1}.card dl .riskc{grid-row:2;grid-column:2}.card dl .soldc{grid-row:3;grid-column:1 / 3}
+td.risk{background:#f6f3ea}
 .card .rbar{width:100%;margin:14px 0 4px}.cflag{margin-top:8px}
 .clean{max-width:640px}.clean tbody th{font-weight:400}
 footer{margin-top:44px;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);padding-top:14px}
@@ -161,6 +167,7 @@ page = f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <main>
 <h1>Restock note: week starting {wk}</h1>
 <p class=sub><span class=tag>Demo data: UCI Online Retail II (real, anonymised orders of a UK online gift shop, CC BY 4.0), replayed as of 27 Nov 2011</span></p>
+<p class=sub>The story around it: a <b>fictional</b> owner of a small online gift shop guesses next week's stock by eye. This public UK gift-shop export stands in for her orders; nobody has used the tool on a real shop. <a href="media/tidy-predict-demo-v8.mp4">Watch the 45-second demo video</a> (AI voice from my own voice sample, labelled in the video).</p>
 <section aria-label="Restock note"><div class=note><span class=lbl>Restock note</span>{e(note["text"])}</div>
 <p class=by>Written by {e(note["author"])}. Every number in it was checked against the table below.</p></section>
 <ul class=stats aria-label="Summary of the replay">
@@ -173,12 +180,13 @@ page = f"""<!doctype html><html lang=en><head><meta charset=utf-8>
 <p><b>Likely range</b> = P10 to P90. P10: sales fall below this in about 1 week out of 10. P90: sales go above this in about 1 week out of 10. So about 8 weeks out of 10 land in between.</p>
 <p><b>Expected</b> = the middle forecast (P50, the median). <b>Keep for a busy week</b> = P90.</p>
 <p><b>Actually sold</b> is what the shop really sold that week, from the same public file. The forecast never saw it.</p>
-<p>The small line shows weekly units sold, {first} to {last} (12 full weeks before the forecast); each line is scaled to its own product, so compare shapes, not heights. Wide-range note: shown when P90 is at least {WIDE} times P10.</p></div></details>
+<p>The small line shows weekly units sold, {first} to {last} (12 full weeks before the forecast); each line is scaled to its own product, so compare shapes, not heights. &ldquo;Wide range: check by hand&rdquo; is shown when P90 is more than 10 times P10, or when last week was under a quarter of the 4-week average.</p></div></details>
 <div class=legend aria-hidden=true><span><i class=lg-band></i>likely range</span><span><i class=lg-exp></i>expected</span><span><i class=lg-dot></i>actually sold</span></div></div>
 <h2>Next week, per product</h2>
 <div class=table-wrap><table><caption>Forecast for the week starting {wk}, in units, with what really sold. Sorted by &ldquo;Keep for a busy week&rdquo;.</caption>
-<thead><tr><th scope=col>Product</th><th scope=col>Past 12 weeks</th><th scope=col>Expected</th><th scope=col>Likely range</th><th scope=col>Keep for a busy week</th><th scope=col>Actually sold</th></tr></thead>
+<thead><tr><th scope=col>Product</th><th scope=col>Past 12 weeks</th><th scope=col>Expected</th><th scope=col>Likely range</th><th scope=col>Keep for a busy week</th><th scope=col>Chance of selling out*</th><th scope=col>Actually sold</th></tr></thead>
 <tbody>{"".join(rows)}</tbody></table></div>
+<p class=sub>* Chance that the week's demand is above what the shop would have if it stocked the busiest of its last 4 weeks, read from TabPFN's forecast distribution. The data has no real stock levels, so that level is the stand-in. It is a ranking signal (higher means more likely to sell out), not a precise probability. Never shown below 5% or above 95%.</p>
 <ol class=cards aria-label="Forecast per product">{"".join(cards)}</ol>
 <h2>What was cleaned</h2>
 <p class=sub>{cs["rows_in"]:,} rows in, {cs["rows_out"]:,} rows counted as sales.

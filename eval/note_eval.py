@@ -20,7 +20,7 @@ if not llm.available():
 tab = pd.read_csv(res / "weekly_units.csv.gz", index_col=0, parse_dates=True)
 names = pd.read_csv(res / "product_names.csv.gz", index_col=0)["description"].to_dict()
 stats = json.loads((res / "clean_stats.json").read_text())["stats"]
-pred = pd.read_csv(res / "backtest_predictions.csv", parse_dates=["week"])
+pred = pd.read_csv(res / "backtest_v2.csv", parse_dates=["week"])   # same forecasts as backtest_predictions.csv plus the quantile grid for the sell-out chance
 
 rows = []
 for wk, g in pred.groupby("week"):

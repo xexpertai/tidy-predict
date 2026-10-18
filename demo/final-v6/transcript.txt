@@ -1,0 +1,7 @@
+[  0.0-  3.8] A small online gift shop guesses by eye what to order for next week,
+[  3.8-  9.5] the fast seller runs out, the slow one piles up, so the owner drops her order export into tidy
+[  9.5- 16.0] predict. Gemma, running on the laptop, reads the odd headers. The code cleans a million rows,
+[ 16.0- 21.8] tab, p, f, n, two forecasts, twenty regular sellers. Gemma writes the note,
+[ 21.8- 24.9] out comes a restock note. Code checks every number in it.
+[ 25.7- 32.6] Now, the honest miss. Rabbit nightlights expected about 1200, sold about 4400,
+[ 32.6- 37.1] built with prior labs, tab, p, f, n, by Harsha Shinde.

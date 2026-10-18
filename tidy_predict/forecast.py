@@ -17,7 +17,8 @@ from .weekly import FEATURES, feature_rows
 
 RELATIVE = False          # chosen on validation weeks, see eval/select_model.py
 MAX_TRAIN = 1000          # TabPFN-2's CPU guardrail; we keep the most recent rows
-QUANTILES = (0.1, 0.5, 0.9)
+# A fine grid of quantiles: P10/P50/P90 are read from it, and the whole grid gives the chance of selling out.
+QUANTILES = tuple(round(0.05 * i, 2) for i in range(1, 20))
 
 
 @dataclass
@@ -46,7 +47,10 @@ def _relative(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def tabpfn_forecast(tab: pd.DataFrame, products: list[str], target_week: pd.Timestamp,
-                    n_estimators: int = 4, seed: int = 0, relative: bool = RELATIVE) -> Forecast:
+                    n_estimators: int = 4, seed: int = 0, relative: bool = RELATIVE,
+                    version: str = "v2") -> Forecast:
+    """``version`` is "v2" for the shipped model. Other versions ("v2.5", "v3.5") exist only for the
+    side-by-side check in eval/backtest_versions.py; they are non-commercial and never used in the product."""
     os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
     from tabpfn import TabPFNRegressor
     from tabpfn.constants import ModelVersion
@@ -55,7 +59,7 @@ def tabpfn_forecast(tab: pd.DataFrame, products: list[str], target_week: pd.Time
     tr = _train_rows(tab, products, target_week)
     te = feature_rows(tab, products, [target_week])
     reg = TabPFNRegressor.create_default_for_version(
-        ModelVersion.V2, device="cpu", n_estimators=n_estimators, random_state=seed)
+        ModelVersion(version), device="cpu", n_estimators=n_estimators, random_state=seed)
     base = te["mean8"].to_numpy() if relative else 0.0
     if relative:
         tr, te_x = _relative(tr), _relative(te)
@@ -66,7 +70,7 @@ def tabpfn_forecast(tab: pd.DataFrame, products: list[str], target_week: pd.Time
     out = te[["product", "week", "actual"]].copy()
     out["mean"] = np.clip(np.expm1(full["mean"] + base), 0, None)
     for q, arr in zip(QUANTILES, full["quantiles"]):
-        out[f"p{int(q * 100)}"] = np.clip(np.expm1(arr + base), 0, None)
+        out[f"p{round(q * 100)}"] = np.clip(np.expm1(arr + base), 0, None)
     return Forecast(table=out.reset_index(drop=True), seconds=time.time() - t0, n_train=len(tr))
 
 
@@ -101,3 +105,21 @@ def wape(actual, pred) -> float:
     a, p = np.asarray(actual, float), np.asarray(pred, float)
     m = ~np.isnan(p)
     return float(np.abs(a[m] - p[m]).sum() / max(a[m].sum(), 1e-9))
+
+
+QCOLS = [f"p{round(q * 100)}" for q in QUANTILES]
+
+
+def chance_demand_above(row, stock: float) -> float:
+    """P(demand > stock) from the forecast quantile grid (linear between quantiles, flat outside P5..P95).
+
+    Outside the grid it is capped at 0.95 / floored at 0.05 on purpose: the grid cannot see further.
+    """
+    xs = np.array([row[c] for c in QCOLS], float)
+    qs = np.array(QUANTILES, float)
+    xs = np.maximum.accumulate(xs)          # quantiles must not cross
+    if stock <= xs[0]:
+        return 0.95
+    if stock >= xs[-1]:
+        return 0.05
+    return float(1.0 - np.interp(stock, xs, qs))

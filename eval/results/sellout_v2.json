@@ -1,0 +1,41 @@
+{
+ "version": "v2",
+ "n": 240,
+ "mean_predicted": 0.442,
+ "share_really_above": 0.404,
+ "brier": 0.2498,
+ "brier_always_base_rate": 0.2408,
+ "brier_coin_flip": 0.25,
+ "bins": [
+  {
+   "predicted_range": "0-25%",
+   "n": 29,
+   "mean_predicted_pct": 17.0,
+   "really_sold_above_pct": 31.0
+  },
+  {
+   "predicted_range": "25-50%",
+   "n": 109,
+   "mean_predicted_pct": 37.6,
+   "really_sold_above_pct": 35.8
+  },
+  {
+   "predicted_range": "50-75%",
+   "n": 98,
+   "mean_predicted_pct": 58.2,
+   "really_sold_above_pct": 46.9
+  },
+  {
+   "predicted_range": "75-100%",
+   "n": 4,
+   "mean_predicted_pct": 78.2,
+   "really_sold_above_pct": 75.0
+  }
+ ],
+ "flagged_50plus": {
+  "n": 102,
+  "really_above": 49
+ },
+ "top_third_really_above_pct": 48.8,
+ "bottom_third_really_above_pct": 35.0
+}

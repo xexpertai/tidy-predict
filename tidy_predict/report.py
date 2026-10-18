@@ -10,7 +10,7 @@ from .clean import REASONS
 CSS = """
 :root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#666;--line:#e3e0d8;--accent:#2f6b4f;--soft:#eef4f0}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-main{max-width:860px;margin:0 auto;padding:28px 16px 48px}
+main{max-width:1000px;margin:0 auto;padding:28px 16px 48px}
 h1{font-size:26px;margin:0 0 4px}h2{font-size:18px;margin:28px 0 8px}
 .sub{color:var(--muted);margin:0 0 18px}
 .note{background:var(--soft);border-left:4px solid var(--accent);padding:14px 16px;border-radius:6px;font-size:17px}
@@ -25,11 +25,21 @@ tr.above td{background:#fff3da}tr.above td:first-child{box-shadow:inset 4px 0 0 
 tr.below td{background:#eef1f6}tr.below td:first-child{box-shadow:inset 4px 0 0 #6b7fa8}.flag.low{background:#dbe3f2;color:#27406e}
 .built{font-weight:600;color:var(--fg)}
 .scroll{overflow-x:auto}
+.greyed{color:#8a8a84;font-style:italic;background:#f1efe9}
+.flag.chk{background:#fde9c4;color:#7a4a00;display:block;margin:3px 0 0 0;width:max-content}
 """
 
 
 def _e(x) -> str:
     return html.escape(str(x))
+
+
+CHK = "<span class='flag chk'>wide range: check by hand</span>"
+
+
+def risk_cell(d) -> str:
+    c = d.get("sell_out_chance_pct")
+    return "<td class=n>n/a</td>" if c is None else f"<td class=n><b>{c}%</b></td>"
 
 
 def render(facts: dict, note_text: str, note_author: str, clean_stats: dict, data_label: str,
@@ -49,10 +59,11 @@ def render(facts: dict, note_text: str, note_author: str, clean_stats: dict, dat
             else:
                 act = f"<td class=n>{'' if a is None else int(a)}</td>"
         rows.append(
-            f"<tr{cls}><td>{_e(d['product'])}</td><td class=n>{d['last_week_units']}</td>"
+            f"<tr{cls}><td>{_e(d['product'])}{CHK if d.get('check_by_hand') else ''}</td><td class=n>{d['last_week_units']}</td>"
             f"<td class=n>{d['avg_last_4_weeks']}</td><td class=n><b>{d['expected_units']}</b></td>"
-            f"<td class=n>{d['low_units']}&ndash;{d['stock_for_busy_week']}</td>"
-            f"<td class=n><span class=bar style='width:{w}px'></span> <b>{d['stock_for_busy_week']}</b></td>{act}</tr>")
+            f"<td class='n{' greyed' if d.get('check_by_hand') else ''}'>{d['low_units']}&ndash;{d['stock_for_busy_week']}</td>" +
+            (f"<td class='n greyed'>check by hand</td>" if d.get('check_by_hand') else
+             f"<td class=n><span class=bar style='width:{w}px'></span> <b>{d['stock_for_busy_week']}</b></td>") + f"{risk_cell(d)}{act}</tr>")
     act_head = "<th>Actually sold</th>" if actuals is not None else ""
     cleaned = [(REASONS[k], v) for k, v in clean_stats.items() if k in REASONS and v]
     clean_rows = "".join(f"<tr><td>{_e(r)}</td><td class=n>{v:,}</td></tr>" for r, v in cleaned)
@@ -67,8 +78,9 @@ def render(facts: dict, note_text: str, note_author: str, clean_stats: dict, dat
 <div class=by>Written by {_e(note_author)}. Every number in it was checked against the table below.</div>
 <h2>Next week, per product</h2>
 <div class=scroll><table><tr><th>Product</th><th>Last week</th><th>4-week avg</th><th>Expected</th>
-<th>Likely range (P10&ndash;P90)</th><th>Stock for a busy week (P90)</th>{act_head}</tr>
+<th>Likely range (P10&ndash;P90)</th><th>Stock for a busy week (P90)</th><th>Sell-out chance*</th>{act_head}</tr>
 {''.join(rows)}</table></div>
+<p class=sub>* Chance that demand is above the busiest of the last 4 weeks (the stand-in for stock). Read it as a ranking signal, not a precise probability.</p>
 <h2>What was cleaned</h2>
 <p class=sub>{clean_stats.get('rows_in', 0):,} rows in, {clean_stats.get('rows_out', 0):,} rows counted as sales.
 Nothing was deleted without a reason: every set-aside row is listed in <code>issues.csv</code> with its row number.</p>

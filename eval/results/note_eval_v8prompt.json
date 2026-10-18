@@ -1,0 +1,288 @@
+{
+  "model": "gemma-4-E2B-it-Q4_0",
+  "notes": 12,
+  "outcomes": {
+    "passed first time": 12
+  },
+  "drafts": 12,
+  "drafts_rejected": 0,
+  "median_seconds_per_draft": 37.9,
+  "per_week": [
+    {
+      "week": "2011-09-12",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the World war 2 gliders asstd designs with 1472 units, Jumbo bag red retrospot with 1461 units, and Small popcorn holder with 1376 units ready. The biggest expected rise is 29% for the Assorted colours silk fan, and the biggest expected drop is 51% for the Mini paint set vintage. The most likely to sell out items are the Assorted colours silk fan with a 60% chance and the Lunch bag red retrospot with a 59% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the World war 2 gliders asstd designs with 1472 units, Jumbo bag red retrospot with 1461 units, and Small popcorn holder with 1376 units ready. The biggest expected rise is 29% for the Assorted colours silk fan, and the biggest expected drop is 51% for the Mini paint set vintage. The most likely to sell out items are the Assorted colours silk fan with a 60% chance and the Lunch bag red retrospot with a 59% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 58.5,
+          "usage": {
+            "completion_tokens": 145,
+            "prompt_tokens": 1249,
+            "total_tokens": 1394,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 5.420975856215843
+        }
+      ]
+    },
+    {
+      "week": "2011-09-19",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have the most stock ready for the World war 2 gliders asstd designs with 1781 units, Jumbo bag red retrospot with 1631 units, and Small popcorn holder with 1465 units. The biggest expected rise is up 33% for the Lunch bag red retrospot, and the biggest expected drop is down 33% for the Mini paint set vintage. The most likely to sell out items are the Lunch bag red retrospot with a 68% chance and Pack of 12 london tissues with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have the most stock ready for the World war 2 gliders asstd designs with 1781 units, Jumbo bag red retrospot with 1631 units, and Small popcorn holder with 1465 units. The biggest expected rise is up 33% for the Lunch bag red retrospot, and the biggest expected drop is down 33% for the Mini paint set vintage. The most likely to sell out items are the Lunch bag red retrospot with a 68% chance and Pack of 12 london tissues with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 64.4,
+          "usage": {
+            "completion_tokens": 146,
+            "prompt_tokens": 1252,
+            "total_tokens": 1398,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 5.355302730277371
+        }
+      ]
+    },
+    {
+      "week": "2011-09-26",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot, Small popcorn holder, and World war 2 gliders asstd designs, with stock levels of 1870, 1782, and 1711 units ready, respectively. The biggest expected rise is up 33% for Party bunting, and the biggest expected drop is down 32% for Mini paint set vintage. The most likely to sell out items are the Small popcorn holder with a 71% chance and the Assorted colour bird ornament with a 63% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should focus on having the most stock of the Jumbo bag red retrospot, Small popcorn holder, and World war 2 gliders asstd designs, with stock levels of 1870, 1782, and 1711 units ready, respectively. The biggest expected rise is up 33% for Party bunting, and the biggest expected drop is down 32% for Mini paint set vintage. The most likely to sell out items are the Small popcorn holder with a 71% chance and the Assorted colour bird ornament with a 63% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 40.6,
+          "usage": {
+            "completion_tokens": 145,
+            "prompt_tokens": 1249,
+            "total_tokens": 1394,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.860429050549559
+        }
+      ]
+    },
+    {
+      "week": "2011-10-03",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on having the most stock ready for the week with 1973 units of the Small popcorn holder, 1897 units of the Jumbo bag red retrospot, and 1785 units of the World war 2 gliders asstd designs. The biggest expected rise is 34% for the Lunch bag apple design, while the biggest expected drop is 35% for the Assorted colours silk fan. The most likely to sell out items are the Small popcorn holder with a 67% chance and the Lunch bag apple design with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "We should focus on having the most stock ready for the week with 1973 units of the Small popcorn holder, 1897 units of the Jumbo bag red retrospot, and 1785 units of the World war 2 gliders asstd designs. The biggest expected rise is 34% for the Lunch bag apple design, while the biggest expected drop is 35% for the Assorted colours silk fan. The most likely to sell out items are the Small popcorn holder with a 67% chance and the Lunch bag apple design with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 37.6,
+          "usage": {
+            "completion_tokens": 143,
+            "prompt_tokens": 1251,
+            "total_tokens": 1394,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.82303117574143
+        }
+      ]
+    },
+    {
+      "week": "2011-10-10",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on having the most stock ready for the week with 2390 units of Small popcorn holder, 2350 units of World war 2 gliders asstd designs, and 2131 units of Jumbo bag red retrospot. The biggest expected rise is up 33% for the Lunch bag apple design, and the biggest expected drop is down 37% for the Jumbo bag pink polkadot. The most likely to sell out items are the Lunch bag apple design with a 68% chance and the Small popcorn holder with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "We should focus on having the most stock ready for the week with 2390 units of Small popcorn holder, 2350 units of World war 2 gliders asstd designs, and 2131 units of Jumbo bag red retrospot. The biggest expected rise is up 33% for the Lunch bag apple design, and the biggest expected drop is down 37% for the Jumbo bag pink polkadot. The most likely to sell out items are the Lunch bag apple design with a 68% chance and the Small popcorn holder with a 65% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 36.8,
+          "usage": {
+            "completion_tokens": 142,
+            "prompt_tokens": 1254,
+            "total_tokens": 1396,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 10.146612797987487
+        }
+      ]
+    },
+    {
+      "week": "2011-10-17",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have 1620 units of Jumbo bag red retrospot, 1556 units of World war 2 gliders asstd designs, and 1496 units of Small popcorn holder ready. The biggest expected rise is 1% and the biggest expected drop is 60%. The products most likely to sell out are World war 2 gliders asstd designs with a 51% chance and Lunch bag vintage doily with a 47% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have 1620 units of Jumbo bag red retrospot, 1556 units of World war 2 gliders asstd designs, and 1496 units of Small popcorn holder ready. The biggest expected rise is 1% and the biggest expected drop is 60%. The products most likely to sell out are World war 2 gliders asstd designs with a 51% chance and Lunch bag vintage doily with a 47% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 35.2,
+          "usage": {
+            "completion_tokens": 124,
+            "prompt_tokens": 1260,
+            "total_tokens": 1384,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 10.057346499135804
+        }
+      ]
+    },
+    {
+      "week": "2011-10-24",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have the most stock ready for the Jumbo bag red retrospot with 1913 units, the Small popcorn holder with 1682 units, and the World war 2 gliders asstd designs with 1659 units. The biggest expected rise is up 22% for the Lunch bag vintage doily, and the biggest expected drop is down 53% for the Red harmonica in box. The most likely to sell out items are the Lunch bag vintage doily with a 61% chance and the Pack of 72 retrospot cake cases with a 58% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have the most stock ready for the Jumbo bag red retrospot with 1913 units, the Small popcorn holder with 1682 units, and the World war 2 gliders asstd designs with 1659 units. The biggest expected rise is up 22% for the Lunch bag vintage doily, and the biggest expected drop is down 53% for the Red harmonica in box. The most likely to sell out items are the Lunch bag vintage doily with a 61% chance and the Pack of 72 retrospot cake cases with a 58% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 38.8,
+          "usage": {
+            "completion_tokens": 151,
+            "prompt_tokens": 1256,
+            "total_tokens": 1407,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.415063448740254
+        }
+      ]
+    },
+    {
+      "week": "2011-10-31",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on having the most stock ready for the week with the Jumbo bag red retrospot at 4069 units, the Small popcorn holder at 2713 units, and the World war 2 gliders asstd designs at 2577 units. The biggest expected rise is up 35% for the Lunch bag vintage doily, and the biggest expected drop is down 93% for the Rabbit night light. The most likely to sell out items are the Lunch bag vintage doily with a 68% chance and the Lunch bag red retrospot with a 66% chance. We set aside 70254 rows of the file during cleaning.",
+      "attempts": [
+        {
+          "text": "We should focus on having the most stock ready for the week with the Jumbo bag red retrospot at 4069 units, the Small popcorn holder at 2713 units, and the World war 2 gliders asstd designs at 2577 units. The biggest expected rise is up 35% for the Lunch bag vintage doily, and the biggest expected drop is down 93% for the Rabbit night light. The most likely to sell out items are the Lunch bag vintage doily with a 68% chance and the Lunch bag red retrospot with a 66% chance. We set aside 70254 rows of the file during cleaning.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 38.0,
+          "usage": {
+            "completion_tokens": 146,
+            "prompt_tokens": 1257,
+            "total_tokens": 1403,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 10.055669573749181
+        }
+      ]
+    },
+    {
+      "week": "2011-11-07",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have 2611 units of Jumbo bag red retrospot, 2482 units of Small popcorn holder, and 2481 units of World war 2 gliders asstd designs ready. The biggest expected rise is up 49% for the Jumbo bag red retrospot, and the biggest expected drop is down 72% for the Rabbit night light. The items most likely to sell out are the Jumbo bag red retrospot with an 80% chance and the Assorted colour bird ornament with a 67% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have 2611 units of Jumbo bag red retrospot, 2482 units of Small popcorn holder, and 2481 units of World war 2 gliders asstd designs ready. The biggest expected rise is up 49% for the Jumbo bag red retrospot, and the biggest expected drop is down 72% for the Rabbit night light. The items most likely to sell out are the Jumbo bag red retrospot with an 80% chance and the Assorted colour bird ornament with a 67% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 36.8,
+          "usage": {
+            "completion_tokens": 139,
+            "prompt_tokens": 1255,
+            "total_tokens": 1394,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 10.108642266504098
+        }
+      ]
+    },
+    {
+      "week": "2011-11-14",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have 2928 units of Assorted colour bird ornament, 2803 units of World war 2 gliders asstd designs, and 2650 units of Jumbo bag red retrospot ready. The biggest expected rise is 113% for Assorted colours silk fan, and the biggest expected drop is 61% for Rabbit night light. The most likely items to sell out are Pack of 60 pink paisley cake cases with a 78% chance and Assorted colours silk fan with a 73% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have 2928 units of Assorted colour bird ornament, 2803 units of World war 2 gliders asstd designs, and 2650 units of Jumbo bag red retrospot ready. The biggest expected rise is 113% for Assorted colours silk fan, and the biggest expected drop is 61% for Rabbit night light. The most likely items to sell out are Pack of 60 pink paisley cake cases with a 78% chance and Assorted colours silk fan with a 73% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 37.0,
+          "usage": {
+            "completion_tokens": 140,
+            "prompt_tokens": 1264,
+            "total_tokens": 1404,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.99610439586242
+        }
+      ]
+    },
+    {
+      "week": "2011-11-21",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "We should focus on having the most stock ready for the week with 3581 units of the Rabbit night light, 3322 units of World war 2 gliders asstd designs, and 3168 units of Small popcorn holder. The biggest expected rise is 146% for the Assorted colours silk fan, and the biggest expected drop is 60% for the Rabbit night light. The items most likely to sell out are the Assorted colours silk fan with a 77% chance and the Pack of 60 pink paisley cake cases with a 71% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "We should focus on having the most stock ready for the week with 3581 units of the Rabbit night light, 3322 units of World war 2 gliders asstd designs, and 3168 units of Small popcorn holder. The biggest expected rise is 146% for the Assorted colours silk fan, and the biggest expected drop is 60% for the Rabbit night light. The items most likely to sell out are the Assorted colours silk fan with a 77% chance and the Pack of 60 pink paisley cake cases with a 71% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 37.9,
+          "usage": {
+            "completion_tokens": 146,
+            "prompt_tokens": 1273,
+            "total_tokens": 1419,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 9.96160385669333
+        }
+      ]
+    },
+    {
+      "week": "2011-11-28",
+      "outcome": "passed first time",
+      "author": "gemma-4-E2B-it-Q4_0 (local, llama.cpp)",
+      "note": "For this week, you should have the most stock of the Red harmonica in box with 2993 units, the Small popcorn holder with 2596 units, and the Rabbit night light with 2592 units ready. The biggest expected rise is for the Set of 60 pantry design cake cases up 79%, and the biggest expected drop is for the Rabbit night light down 58%. The most likely to sell out items are the Set of 60 pantry design cake cases with a 78% chance and the Brocade ring purse with a 72% chance. During cleaning, 70254 rows of the file were set aside.",
+      "attempts": [
+        {
+          "text": "For this week, you should have the most stock of the Red harmonica in box with 2993 units, the Small popcorn holder with 2596 units, and the Rabbit night light with 2592 units ready. The biggest expected rise is for the Set of 60 pantry design cake cases up 79%, and the biggest expected drop is for the Rabbit night light down 58%. The most likely to sell out items are the Set of 60 pantry design cake cases with a 78% chance and the Brocade ring purse with a 72% chance. During cleaning, 70254 rows of the file were set aside.",
+          "ok": true,
+          "unknown_numbers": [],
+          "seconds": 37.2,
+          "usage": {
+            "completion_tokens": 144,
+            "prompt_tokens": 1263,
+            "total_tokens": 1407,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "tokens_per_s": 10.025636182703268
+        }
+      ]
+    }
+  ]
+}

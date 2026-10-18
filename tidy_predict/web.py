@@ -33,7 +33,7 @@ main{max-width:920px}
 .top h1{font-size:30px;letter-spacing:-.02em}.top .local{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);
 border-radius:999px;padding:4px 12px;white-space:nowrap}.top .local::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;
 background:var(--accent);margin-right:7px;vertical-align:1px}
-form{display:grid;gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+form{display:grid;grid-template-columns:minmax(0,1fr);gap:18px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
 input[type=text]{font:inherit;font-size:16px;padding:10px 12px;border:1px solid #cfd6d1;border-radius:8px;width:100%;background:#fff;color:var(--fg)}
 input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
@@ -46,9 +46,9 @@ input[type=text]:focus{outline:2px solid var(--accent);outline-offset:1px;border
 .drop .or u{color:var(--accent);text-decoration:none;font-weight:600;border-bottom:1px solid currentColor}
 .chip{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;margin-top:12px}
 .chip .sz{color:var(--muted);font-size:13px}
-.prev{margin-top:14px;text-align:left}.prev .cap{font-size:13px;color:var(--muted);margin:0 0 6px}
-.prev table{font-size:14px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.prev th{background:#f3ead7;color:#6b4e12;text-align:left;font-size:13px;white-space:nowrap}.prev td{text-align:left;white-space:nowrap;max-width:260px;overflow:hidden;text-overflow:ellipsis}
+.drop{min-width:0}.prev{margin-top:14px;text-align:left;max-width:100%;overflow-x:auto}.prev .cap{font-size:13px;color:var(--muted);margin:0 0 6px}
+.prev table{font-size:13px;background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.prev th{background:#f3ead7;color:#6b4e12;text-align:left;font-size:12px;white-space:nowrap;padding:6px 6px}.prev td{padding:6px 6px}.prev td{text-align:left;white-space:nowrap;max-width:120px;overflow:hidden;text-overflow:ellipsis}
 button{font:inherit;font-size:16px;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:8px;padding:12px 20px;cursor:pointer;justify-self:start}
 button:hover{background:#265a42}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0 0}

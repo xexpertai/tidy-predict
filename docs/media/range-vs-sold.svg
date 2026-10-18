@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1390" width="1000" role="img" font-family="system-ui,Segoe UI,Roboto,sans-serif" aria-label="For four products, the forecast range for the week of 28 Nov 2011, the 4-week average, and what really sold">
+<rect width="1000" height="1390" fill="#fbfaf7"/>
+<text x="40" y="46" font-size="30" font-weight="700" fill="#1d1d1b">Forecast range vs what really sold, week of 28 Nov 2011</text>
+<text x="40" y="80" font-size="22" fill="#5c5a54">Demo data. Each row has its own scale.</text>
+<text x="40" y="150" font-size="26" font-weight="700" fill="#1d1d1b">Rabbit night light</text>
+<text x="960" y="150" font-size="24" font-weight="700" text-anchor="end" fill="#b85c00">sold ABOVE the range: 4,452</text>
+<rect x="40" y="202" width="920" height="2" fill="#d9d6cc"/>
+<rect x="163.4" y="190" width="381.9" height="26" rx="4" fill="#cfe3d8"/>
+<rect x="281.5" y="184" width="4" height="38" fill="#1d1d1b"/>
+<path d="M619.2 221 l-8 12 h16 z" fill="#5c5a54"/>
+<circle cx="907.9" cy="203" r="14" fill="#b85c00" stroke="#fff" stroke-width="3"/>
+<text x="40" y="270" font-size="24" fill="#5c5a54">range 633 to 2,592, expected 1,249</text>
+<text x="40" y="300" font-size="24" fill="#5c5a54">4-week average 2,971; busiest of last 4 weeks 4,265</text>
+<text x="40" y="330" font-size="24" fill="#5c5a54">chance of selling out at the busiest-week stock: 5%</text>
+<text x="40" y="425" font-size="26" font-weight="700" fill="#1d1d1b">Small popcorn holder</text>
+<text x="960" y="425" font-size="24" font-weight="700" text-anchor="end" fill="#b85c00">sold ABOVE the range: 3,271</text>
+<rect x="40" y="477" width="920" height="2" fill="#d9d6cc"/>
+<rect x="213.5" y="465" width="515.3" height="26" rx="4" fill="#cfe3d8"/>
+<rect x="376.6" y="459" width="4" height="38" fill="#1d1d1b"/>
+<path d="M766.5 496 l-8 12 h16 z" fill="#5c5a54"/>
+<circle cx="907.9" cy="478" r="14" fill="#b85c00" stroke="#fff" stroke-width="3"/>
+<text x="40" y="545" font-size="24" fill="#5c5a54">range 654 to 2,596, expected 1,276</text>
+<text x="40" y="575" font-size="24" fill="#5c5a54">4-week average 2,738; busiest of last 4 weeks 3,900</text>
+<text x="40" y="605" font-size="24" fill="#5c5a54">chance of selling out at the busiest-week stock: 5%</text>
+<text x="40" y="700" font-size="26" font-weight="700" fill="#1d1d1b">Red harmonica in box</text>
+<text x="960" y="700" font-size="24" font-weight="700" text-anchor="end" fill="#2f6b4f">sold inside the range: 1,120</text>
+<rect x="40" y="752" width="920" height="2" fill="#d9d6cc"/>
+<rect x="52.8" y="740" width="855.2" height="26" rx="4" fill="#cfe3d8"/>
+<rect x="186.5" y="734" width="4" height="38" fill="#1d1d1b"/>
+<path d="M306.2 771 l-8 12 h16 z" fill="#5c5a54"/>
+<circle cx="364.8" cy="753" r="14" fill="#2f6b4f" stroke="#fff" stroke-width="3"/>
+<text x="40" y="820" font-size="24" fill="#5c5a54">range 44 to 2,993, expected 512</text>
+<text x="40" y="850" font-size="24" fill="#5c5a54">4-week average 918; busiest of last 4 weeks 2,652</text>
+<text x="40" y="880" font-size="24" fill="#5c5a54">chance of selling out at the busiest-week stock: 12%</text>
+<text x="40" y="910" font-size="24" font-weight="700" fill="#b85c00">Flagged in the note: wide range, check by hand</text>
+<text x="40" y="975" font-size="26" font-weight="700" fill="#1d1d1b">Set of 60 pantry design cake cases</text>
+<text x="960" y="975" font-size="24" font-weight="700" text-anchor="end" fill="#2f6b4f">sold inside the range: 148</text>
+<rect x="40" y="1027" width="920" height="2" fill="#d9d6cc"/>
+<rect x="164.5" y="1015" width="743.4" height="26" rx="4" fill="#cfe3d8"/>
+<rect x="383.9" y="1009" width="4" height="38" fill="#1d1d1b"/>
+<path d="M233.7 1046 l-8 12 h16 z" fill="#5c5a54"/>
+<circle cx="176.5" cy="1028" r="14" fill="#2f6b4f" stroke="#fff" stroke-width="3"/>
+<text x="40" y="1095" font-size="24" fill="#5c5a54">range 135 to 941, expected 375</text>
+<text x="40" y="1125" font-size="24" fill="#5c5a54">4-week average 210; busiest of last 4 weeks 272</text>
+<text x="40" y="1155" font-size="24" fill="#5c5a54">chance of selling out at the busiest-week stock: 67%</text>
+<rect x="40" y="1240" width="30" height="16" rx="3" fill="#cfe3d8"/><text x="82" y="1256" font-size="24" fill="#5c5a54">likely range (P10 to P90)</text>
+<rect x="440" y="1236" width="4" height="24" fill="#1d1d1b"/><text x="456" y="1256" font-size="24" fill="#5c5a54">expected</text>
+<path d="M640 1240 l-8 14 h16 z" fill="#5c5a54"/><text x="660" y="1256" font-size="24" fill="#5c5a54">4-week average</text>
+<circle cx="60" cy="1292" r="10" fill="#b85c00"/><text x="82" y="1300" font-size="24" fill="#5c5a54">what really sold (orange: above the range, green: inside)</text>
+</svg>
